@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>湊一桌麻將尊老愛幼團｜濟州島 2026.11.21–11.24</title>
+<meta name="theme-color" content="#FBF6EC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF6EC; --paper:#FFFCF5; --beige:#F1E8D6; --oat:#E4D6BA; --oat-d:#CDBB98;
+  --blue:#CFDFE6; --blue-d:#9DBBC8; --blue-ink:#4F7384;
+  --brown:#B79A74; --brown-d:#5A4331; --ink:#3F3126; --mute:#8A7a68;
+  --clay:#C58B6E; --clay-bg:#F6E4D8; --sage:#A9B89A; --sage-bg:#E8EEDF;
+  --line:#E2D6BF; --r:22px; --r-s:14px;
+  --serif:'Noto Serif TC','Noto Serif JP',serif;
+  /* 內文：源石黑體（若裝置/自架網站有此字體就用，否則用同源的思源黑體 Noto Sans TC） */
+  --sans:'GenSekiGothic2 TW','GenSekiGothic TW','源石黑體','Noto Sans TC',system-ui,-apple-system,'PingFang TC','Microsoft JhengHei',sans-serif;
+  /* 手寫字：辰宇落雁體 → 粉圓（Huninn，圓黑體風）→ M PLUS Rounded 1c */
+  --hand:'ChenYuluoyan-Thin','ChenYuluoyan','辰宇落雁體','Huninn','jf-openhuninn-2.0','M PLUS Rounded 1c','Noto Sans TC',sans-serif;
+  --num:'Cormorant Garamond','Noto Serif TC',serif;
+  --shadow:0 1px 0 rgba(255,255,255,.8) inset,0 10px 30px -18px rgba(90,67,49,.35);
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;
+  background-image:radial-gradient(rgba(183,154,116,.10) 1px,transparent 1.2px);background-size:22px 22px}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;margin:0;line-height:1.35;color:var(--brown-d)}
+a{color:var(--blue-ink);text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.hide{display:none!important}
+.mute{color:var(--mute)}
+.small{font-size:12.5px}
+.num{font-family:var(--num)}
+
+/* nav */
+.top{position:sticky;top:0;z-index:50;background:rgba(251,246,236,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;padding-top:9px;padding-bottom:9px}
+.brand{font-family:var(--serif);font-weight:700;color:var(--brown-d);white-space:nowrap;display:flex;align-items:center;gap:8px;font-size:15px}
+.brand i{width:26px;height:26px;border-radius:50%;background:var(--blue);display:grid;place-items:center;font-style:normal;font-size:13px;border:1px solid var(--blue-d)}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;flex:1;padding:2px 0}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;border:1px solid transparent;background:transparent;padding:6px 13px;border-radius:99px;color:var(--brown-d);cursor:pointer;font-size:14px;white-space:nowrap}
+.tab:hover{background:var(--beige)}
+.tab.on{background:var(--brown-d);color:var(--cream)}
+@media(max-width:640px){.brand span{display:none}}
+
+/* buttons / chips */
+.btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--oat-d);background:var(--paper);color:var(--brown-d);padding:7px 14px;border-radius:99px;cursor:pointer;font-size:13.5px;line-height:1.3;transition:.15s;text-decoration:none}
+.btn:hover{background:var(--beige)}
+.btn.pri{background:var(--brown-d);border-color:var(--brown-d);color:var(--cream)}
+.btn.pri:hover{background:#4a3627}
+.btn.blue{background:var(--blue);border-color:var(--blue-d);color:#2f5262}
+.btn.sm{padding:4px 11px;font-size:12.5px}
+.btn.danger{color:#9b5a43;border-color:#e2b9a6}
+.btn.ghost{background:transparent}
+.chip{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:2px 10px;border-radius:99px;background:var(--beige);color:var(--brown-d);border:1px solid var(--line)}
+.chip.blue{background:var(--blue);border-color:var(--blue-d);color:#2f5262}
+.chip.clay{background:var(--clay-bg);border-color:#e6c3ae;color:#8a533a}
+.chip.sage{background:var(--sage-bg);border-color:#cbd6bd;color:#506245}
+
+/* cards */
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px}
+.card.soft{background:var(--beige);box-shadow:none}
+.sec{margin:46px 0 0}
+.sec-h{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.sec-h h2{font-size:23px}
+.sec-h .en{font-family:var(--num);font-style:italic;color:var(--brown);font-size:17px}
+.sec-h .line{flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--oat-d) 0 4px,transparent 4px 9px);min-width:30px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:860px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+/* hero */
+.hero{position:relative;margin:16px 0 0;border-radius:30px;overflow:hidden;min-height:430px;background:linear-gradient(180deg,#e9f0f1 0%,#f6efe0 58%,#efe3c9 100%);border:1px solid var(--line);isolation:isolate}
+.hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:-1}
+.hero svg.art{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.hero.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,246,236,.05),rgba(63,49,38,.55));z-index:0}
+.hero.photo .hero-in{color:#fffaf0}
+.hero.photo h1,.hero.photo .date{color:#fffaf0}
+.hero-in{position:relative;z-index:1;padding:44px 30px 34px;display:flex;flex-direction:column;justify-content:flex-end;min-height:430px}
+.hero .stamp{position:absolute;right:22px;top:22px;width:74px;height:74px;border-radius:50%;border:1.5px dashed var(--brown);display:grid;place-items:center;text-align:center;font-size:11px;line-height:1.3;color:var(--brown-d);transform:rotate(10deg);background:rgba(255,252,245,.6);z-index:2}
+.hero .eyebrow{font-family:var(--num);font-style:italic;font-size:clamp(15px,4vw,20px);color:var(--brown-d);letter-spacing:.04em}
+.hero h1{font-size:clamp(25px,6.4vw,54px);letter-spacing:.04em;margin:6px 0 10px;white-space:nowrap}
+.hero .date{font-family:var(--num);font-size:clamp(22px,4vw,30px);letter-spacing:.12em;color:var(--brown-d)}
+.hero .sub{margin-top:10px;max-width:520px;color:var(--brown-d)}
+.hero.photo .sub,.hero.photo .eyebrow{color:#fff4e2}
+.hero-btn{position:absolute;left:18px;top:18px;z-index:3;opacity:.9}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.pill{background:rgba(255,252,245,.85);border:1px solid var(--oat);border-radius:99px;padding:5px 14px;font-size:13.5px;color:var(--brown-d)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+@media(max-width:760px){.facts{grid-template-columns:repeat(2,1fr)}}
+.fact{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-s);padding:14px 16px;text-align:center}
+.fact b{display:block;font-family:var(--serif);font-size:17px;color:var(--brown-d)}
+.fact span{font-size:12.5px;color:var(--mute)}
+
+/* flights / hotels */
+.flight{display:flex;flex-direction:column;gap:10px}
+.fl-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.fl-t{font-family:var(--num);font-size:34px;line-height:1;color:var(--brown-d)}
+.fl-p{font-size:12.5px;color:var(--mute)}
+.fl-mid{flex:1;text-align:center;font-size:12px;color:var(--mute);position:relative}
+.fl-mid::before{content:"";position:absolute;left:0;right:0;top:9px;border-top:1px dashed var(--oat-d)}
+.fl-mid span{position:relative;background:var(--paper);padding:0 8px}
+.hotel{display:flex;gap:14px}
+.hotel .ph{width:92px;height:92px;border-radius:16px;object-fit:cover;flex:none;border:1px solid var(--line)}
+.hotel h3{font-size:17px}
+
+/* day cards on home */
+.daycard{position:relative;cursor:pointer;overflow:hidden;padding:0;transition:.2s;text-align:left}
+.daycard:hover{transform:translateY(-3px)}
+.daycard .art{height:92px;background-size:cover;background-position:center;border-bottom:1px solid var(--line)}
+.daycard .body{padding:14px 16px 16px}
+.daycard .dn{font-family:var(--num);font-size:30px;font-style:italic;color:var(--brown);line-height:1}
+.daycard .dd{font-size:12.5px;color:var(--mute)}
+.daycard h3{font-size:16px;margin:6px 0}
+.daycard ul{margin:6px 0 0;padding-left:18px;font-size:13px;color:var(--brown-d)}
+
+/* day page */
+.daybar{display:flex;gap:8px;overflow-x:auto;padding:16px 0 4px;scrollbar-width:none}
+.daybar::-webkit-scrollbar{display:none}
+.dtab{flex:1 0 auto;min-width:92px;text-align:center;border:1px solid var(--line);background:var(--paper);border-radius:16px;padding:9px 10px;cursor:pointer}
+.dtab b{display:block;font-family:var(--num);font-size:20px;font-style:italic;color:var(--brown)}
+.dtab span{font-size:12px;color:var(--mute)}
+.dtab.on{background:var(--brown-d);border-color:var(--brown-d)}
+.dtab.on b,.dtab.on span{color:var(--cream)}
+.dayhero{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);margin-top:12px;background:var(--beige)}
+.dayhero .art{height:150px;background-size:cover;background-position:center}
+.dayhero .txt{position:relative;padding:14px 22px 20px;background:var(--paper)}
+.dayhero .big{font-family:var(--num);font-style:italic;font-size:54px;line-height:1;color:var(--brown)}
+.dayhero h2{font-size:24px}
+.washi{position:absolute;width:86px;height:22px;background:repeating-linear-gradient(135deg,rgba(157,187,200,.65) 0 6px,rgba(207,223,230,.65) 6px 12px);opacity:.9;transform:rotate(-4deg);z-index:2}
+.dayhero .washi{left:18px;top:-6px}
+.flagbox{border:1px dashed #d9ae96;background:#FBEFE6;border-radius:var(--r-s);padding:12px 16px;margin-top:14px}
+.flagbox h4{font-size:14.5px;color:#8a533a;margin-bottom:6px}
+.flag{display:flex;gap:10px;align-items:flex-start;padding:6px 0;font-size:13.5px}
+.flag input{margin-top:5px;accent-color:var(--clay)}
+.flag.done span{text-decoration:line-through;color:var(--mute)}
+.flag small{display:block;color:var(--mute)}
+
+.tl{position:relative;margin:22px 0 0;padding-left:0}
+.tl-item{position:relative;display:grid;grid-template-columns:70px 22px 1fr;gap:0 8px}
+.tl-time{text-align:right;padding-top:16px;font-family:var(--num);font-size:19px;color:var(--brown-d);line-height:1.1}
+.tl-time small{display:block;font-family:var(--sans);font-size:11px;color:var(--mute)}
+.tl-rail{position:relative}
+.tl-rail::before{content:"";position:absolute;left:10px;top:0;bottom:0;border-left:2px dotted var(--oat-d)}
+.tl-item:first-child .tl-rail::before{top:22px}
+.tl-item.last .tl-rail::before{bottom:calc(100% - 22px)}
+.tl-dot{position:absolute;left:3px;top:19px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:3px solid var(--blue-d);z-index:1}
+.tl-item.meal .tl-dot{border-color:var(--brown)}
+.tl-item.hotel .tl-dot,.tl-item.flight .tl-dot{border-color:var(--brown-d);background:var(--brown-d)}
+.tl-card{margin:6px 0 4px;padding:0;overflow:hidden}
+.tl-card .in{padding:16px 18px}
+.tl-card h3{font-size:18px}
+.tl-card .kr{font-size:13px;color:var(--mute);margin-left:6px;font-family:var(--sans);font-weight:400}
+.tl-media{display:grid;grid-template-columns:130px 1fr}
+@media(max-width:560px){.tl-media{grid-template-columns:1fr}.tl-item{grid-template-columns:50px 20px 1fr}.tl-time{font-size:16px}}
+.ph-slot{position:relative;min-height:112px;background:linear-gradient(135deg,var(--beige),#e8f0f2);border-right:1px solid var(--line);display:grid;place-items:center;overflow:hidden}
+.ph-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph-slot .ic{font-size:30px;opacity:.55}
+.ph-slot .up{position:absolute;right:6px;bottom:6px;font-size:11px;padding:3px 9px;background:rgba(255,252,245,.9);border:1px solid var(--oat);border-radius:99px;cursor:pointer;z-index:2;color:var(--brown-d)}
+.ph-slot .cap{position:absolute;left:6px;bottom:6px;font-size:10px;background:rgba(255,252,245,.85);padding:1px 7px;border-radius:99px;color:var(--mute);z-index:2}
+@media(max-width:560px){.ph-slot{min-height:150px;border-right:0;border-bottom:1px solid var(--line)}}
+.meta{display:flex;flex-wrap:wrap;gap:6px 8px;margin:8px 0 2px}
+.kv{font-size:13px;color:var(--brown-d);margin-top:3px}
+.kv b{color:var(--mute);font-weight:500;margin-right:6px}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.drive{margin:2px 0 2px;display:grid;grid-template-columns:70px 22px 1fr;gap:0 8px;font-size:12.5px;color:var(--mute)}
+.drive .rail{position:relative}
+.drive .rail::before{content:"";position:absolute;left:10px;top:0;bottom:0;border-left:2px dotted var(--oat-d)}
+.drive .tx{padding:6px 0;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.drive .tx span.tag{background:var(--blue);color:#2f5262;border-radius:99px;padding:1px 10px;border:1px solid var(--blue-d)}
+@media(max-width:560px){.drive{grid-template-columns:50px 20px 1fr}}
+.tipbox{background:var(--blue);border:1px solid var(--blue-d);border-radius:var(--r-s);padding:14px 18px;color:#2b4a58}
+.tipbox h4{color:#2b4a58;font-size:15px;margin-bottom:6px}
+.tipbox ul,.list{margin:0;padding-left:18px}
+.tipbox li,.list li{margin:3px 0;font-size:13.8px}
+.mapcard iframe{width:100%;height:320px;border:0;border-radius:14px;background:var(--beige)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.chips .btn.on{background:var(--blue);border-color:var(--blue-d)}
+textarea.note,input.inp,select.inp{width:100%;border:1px solid var(--oat);background:#fffdf8;border-radius:12px;padding:9px 12px;outline:none}
+textarea.note{min-height:90px;resize:vertical}
+textarea.note:focus,input.inp:focus,select.inp:focus{border-color:var(--blue-d);box-shadow:0 0 0 3px rgba(157,187,200,.3)}
+.pager{display:flex;justify-content:space-between;gap:10px;margin-top:26px}
+
+/* food */
+.fcard{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.fcard .ph-slot{min-height:150px;border-right:0;border-bottom:1px solid var(--line)}
+.fcard .ph-slot .kr-big{font-family:var(--serif);font-size:24px;color:var(--brown);opacity:.55;text-align:center;padding:0 10px}
+.fcard .in{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column}
+.fcard h3{font-size:18px}
+.badge-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.filters .btn.on{background:var(--brown-d);color:var(--cream);border-color:var(--brown-d)}
+.tbc{color:#9b5a43;background:var(--clay-bg);border-radius:6px;padding:0 6px;font-size:12px}
+
+/* budget */
+.stat{display:flex;flex-direction:column;gap:2px}
+.stat .v{font-family:var(--num);font-size:30px;color:var(--brown-d);line-height:1.1}
+.stat .l{font-size:12.5px;color:var(--mute)}
+.stat.neg .v{color:#a85a3f}
+.stat.pos .v{color:#55704a}
+table.t{width:100%;border-collapse:collapse;font-size:14px}
+table.t th{font-weight:500;color:var(--mute);font-size:12.5px;text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+table.t td{padding:8px;border-bottom:1px dashed var(--line);vertical-align:middle}
+.tr{text-align:right!important}
+.bar{height:7px;background:var(--beige);border-radius:9px;overflow:hidden;min-width:80px}
+.bar i{display:block;height:100%;background:var(--blue-d);border-radius:9px}
+.bar.over i{background:var(--clay)}
+.scroll-x{overflow-x:auto}
+.form{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;align-items:end}
+.form label{font-size:12px;color:var(--mute);display:block;margin-bottom:3px}
+.form .c2{grid-column:span 2}.form .c3{grid-column:span 3}
+@media(max-width:760px){.form{grid-template-columns:repeat(2,1fr)}.form .c2,.form .c3{grid-column:span 2}}
+.seg{display:inline-flex;border:1px solid var(--oat-d);border-radius:99px;overflow:hidden;background:var(--paper)}
+.seg button{border:0;background:transparent;padding:8px 16px;cursor:pointer}
+.seg button.on{background:var(--brown-d);color:var(--cream)}
+.exp{display:grid;grid-template-columns:70px 1fr auto;gap:4px 12px;padding:12px 0;border-bottom:1px dashed var(--line);align-items:center}
+.exp .amt{text-align:right}
+.exp .amt b{font-family:var(--num);font-size:19px;color:var(--brown-d)}
+.exp .row2{grid-column:2/4;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+
+/* photos */
+.drop{border:1.5px dashed var(--oat-d);border-radius:var(--r);background:var(--paper);padding:22px;text-align:center}
+.masonry{column-count:3;column-gap:14px;margin-top:18px}
+@media(max-width:860px){.masonry{column-count:2}}
+.masonry figure{margin:0 0 14px;break-inside:avoid;background:var(--paper);padding:8px 8px 10px;border:1px solid var(--line);border-radius:6px;box-shadow:0 8px 20px -14px rgba(90,67,49,.5);cursor:zoom-in;position:relative;transition:.2s}
+.masonry figure:nth-child(3n+1){transform:rotate(-.6deg)}.masonry figure:nth-child(3n+2){transform:rotate(.5deg)}
+.masonry figure:hover{transform:translateY(-3px) rotate(0)}
+.masonry img{width:100%;border-radius:3px}
+.masonry figcaption{font-size:12.5px;color:var(--mute);padding:6px 4px 0;display:flex;justify-content:space-between;gap:6px}
+.lb{position:fixed;inset:0;background:rgba(40,30,22,.9);z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px}
+.lb img{max-width:100%;max-height:68vh;border-radius:6px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb .bar2{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;justify-content:center;align-items:center;max-width:680px;width:100%}
+.lb .x{position:absolute;right:14px;top:14px}
+.lb .nv{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,252,245,.85);cursor:pointer;font-size:20px}
+.lb .nv.l{left:10px}.lb .nv.r{right:10px}
+
+/* checklist */
+.ck-g h3{font-size:17px;margin-bottom:8px}
+.ck{display:flex;align-items:center;gap:10px;padding:7px 2px;border-bottom:1px dashed var(--line)}
+.ck input[type=checkbox]{width:19px;height:19px;accent-color:var(--brown-d);flex:none}
+.ck span{flex:1;font-size:14.5px}
+.ck.done span{color:var(--mute);text-decoration:line-through}
+.ck .del{opacity:.5;border:0;background:none;cursor:pointer;font-size:16px}
+.ck .del:hover{opacity:1}
+.addrow{display:flex;gap:8px;margin-top:10px}
+.prog{height:8px;background:var(--beige);border-radius:9px;overflow:hidden}
+.prog i{display:block;height:100%;background:var(--sage);transition:.3s}
+
+/* weather */
+.wcard h3{font-size:17px}
+.wday{display:grid;grid-template-columns:62px 1fr;gap:4px 12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+.wday .d{font-family:var(--num);font-size:20px;color:var(--brown-d);line-height:1.1}
+.wday .d small{display:block;font-family:var(--sans);font-size:11px;color:var(--mute)}
+.wrow{display:flex;flex-wrap:wrap;gap:4px 12px}
+.wrow span b{font-weight:500;color:var(--mute);margin-right:3px;font-size:12px}
+
+footer{margin:60px 0 40px;text-align:center;color:var(--mute);font-size:12.5px}
+footer .stone{width:54px;margin:0 auto 8px;border-radius:50%}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--brown-d);color:var(--cream);padding:9px 18px;border-radius:99px;font-size:13.5px;z-index:200;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.modal{position:fixed;inset:0;background:rgba(63,49,38,.45);z-index:120;display:grid;place-items:center;padding:16px}
+.modal .card{max-width:520px;width:100%;max-height:90vh;overflow:auto}
+
+@media(max-width:560px){.hero-in{padding:70px 20px 26px}.hero .date{letter-spacing:.06em}}
+
+/* ===== 字體套用 ===== */
+h1,h2,.brand,.dayhero .big,.dtab b,.sec-h h2,.hero .eyebrow,.daycard .dn,textarea.note,.mealh{font-family:var(--hand)}
+h1,h2{font-weight:500}
+/* ===== 圖示式照片 ===== */
+.ph-slot.icon img{object-fit:contain;padding:22px 30px;mix-blend-mode:multiply;background:none}
+/* ===== 期限提醒 ===== */
+.deadline{margin:8px 0 4px;padding:8px 12px;background:var(--clay-bg);border:1px solid #E9C9B5;border-radius:12px;font-size:13.5px;color:var(--brown-d)}
+/* ===== 示意地圖 ===== */
+.jmap svg{width:100%;height:auto;display:block;border-radius:18px;border:1px solid var(--line)}
+.jmap .jl{fill:#4B6B3E;font-family:var(--hand);font-weight:500;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round}
+.jmap .pn{font-size:15px;font-weight:800;pointer-events:none;font-family:var(--sans)}
+.jmap .pin{cursor:pointer}.jmap .pin:hover .bob{filter:brightness(1.08)}
+.jleg{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:4px 12px;font-size:13px}
+.jleg li{cursor:pointer;padding:3px 8px;border-radius:10px}.jleg li.on{background:var(--beige);font-weight:600}
+.jleg b{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--brown-d);color:#fff;font-size:12px;margin-right:4px}
+#mapdet summary{cursor:pointer;color:var(--blue-ink)}#mapdet iframe{width:100%;height:320px;border:0;border-radius:14px;margin-top:8px}
+/* ===== 餐廳多選項 ===== */
+.mealh{margin:18px 0 8px;font-size:18px;color:var(--brown-d)}
+.mealc{padding:14px}.mealc h3{font-size:16px;margin-top:6px}
+/* ===== 可編輯清單 ===== */
+.ckhead{display:flex;gap:8px;align-items:center;margin-bottom:6px}.ckhead .gname{font-family:var(--hand);font-size:17px;font-weight:600;border-color:transparent;background:transparent;padding:4px 6px;flex:1}.ckhead .gname:focus{background:#fff;border-color:var(--oat)}
+.ck .ckt{flex:1;min-width:0;border:1px solid transparent;background:transparent;font:inherit;color:inherit;padding:3px 6px;border-radius:8px}.ck .ckt:focus{background:#fff;border-color:var(--oat);outline:0}
+.ck.done .ckt{text-decoration:line-through;opacity:.55}
+.ck .del,.ckhead .del{background:none;border:0;cursor:pointer;color:var(--mute);font-size:14px}
+
+/* ===== 手機版面穩定 ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html,body{overflow-x:hidden;max-width:100%}
+.card,.ck,.ckhead,.addrow{min-width:0}
+.ck-g{overflow:hidden}.ckhead .gname,.addrow .inp{min-width:0}
+img,svg{max-width:100%}
+.dayhero .art{height:170px;background-size:cover;background-position:center;background-color:var(--beige)}
+.ph-slot{min-height:150px}
+.ph-slot.icon{background:linear-gradient(135deg,var(--beige),#e8f0f2)}
+.ph-slot.icon img{padding:18px 28px;mix-blend-mode:normal}
+.hotel .ph{background:var(--beige)}
+.hero .art,.dayhero .art{contain:paint}
+
+.warnbox{background:var(--clay-bg);border:1.5px solid #E2B79F;border-radius:16px;padding:14px 16px;color:var(--brown-d);font-size:14.5px}
+.times{display:flex;flex-wrap:wrap;gap:6px}.times span{background:var(--beige);border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:13.5px;font-variant-numeric:tabular-nums}
+
+/* ===== v3 活潑風 ===== */
+.ph-slot.icon{background:#FFF1D6}
+.ph-slot.icon img{object-fit:cover;padding:0;mix-blend-mode:normal}
+.jmap svg{border-radius:20px;border:2px solid #fff;box-shadow:0 6px 18px rgba(79,115,132,.18)}
+.jmap .route{animation:jdash 1.2s linear infinite}
+@keyframes jdash{to{stroke-dashoffset:-34}}
+.jmap .pin.on .bob{animation:jbob .9s ease-in-out infinite}
+@keyframes jbob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.jleg b{box-shadow:0 1px 0 rgba(0,0,0,.15)}
+@media (prefers-reduced-motion:reduce){.jmap .route,.jmap .pin.on .bob{animation:none}}
+/* 回到最上方 */
+#totop{position:fixed;right:14px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:60;width:48px;height:48px;border:0;border-radius:50%;background:#FF8E72;color:#fff;box-shadow:0 4px 14px rgba(90,67,49,.3);cursor:pointer;display:grid;place-items:center;opacity:0;transform:translateY(14px) scale(.9);pointer-events:none;transition:opacity .2s,transform .2s;-webkit-tap-highlight-color:transparent}
+#totop.show{opacity:1;transform:none;pointer-events:auto}
+#totop:active{transform:scale(.92)}
+#totop svg{width:24px;height:24px;display:block}
+
+/* v5 完整顯示圖片 */
+.ph-slot img,.ph-slot.icon img{object-fit:contain;background:#FDF3E9}
+.ph-slot,.ph-slot.icon{background:#FDF3E9}
+@media(max-width:560px){.ph-slot{aspect-ratio:8/5;min-height:0}.fcard .ph-slot{aspect-ratio:8/5;min-height:0}}
+.dayhero .art,.daycard .art{background-size:contain;background-repeat:no-repeat;background-position:center;background-color:#FDF3E9;height:auto;aspect-ratio:8/5;max-height:340px}
+.daycard .art{max-height:none;aspect-ratio:8/5}
+.hero.photo::after{background:linear-gradient(180deg,rgba(63,49,38,0) 18%,rgba(63,49,38,.74))}
+
+/* v6 主圖：完整顯示＋模糊底，任何寬度都不留白 */
+.dayhero .art,.daycard .art{position:relative;overflow:hidden;background:#FDF3E9 !important;width:100%;aspect-ratio:8/5;height:auto;max-height:none}
+.dayhero .art::before,.daycard .art::before{content:"";position:absolute;inset:-24px;background:var(--bg) center/cover no-repeat;filter:blur(22px) saturate(1.05);opacity:.9}
+.dayhero .art::after,.daycard .art::after{content:"";position:absolute;inset:0;background:var(--bg) center/contain no-repeat}
+
+.hotel .ph{width:136px;height:auto;aspect-ratio:8/5;object-fit:cover;border-radius:14px;background:#FDF3E9}
+@media(max-width:420px){.hotel .ph{width:110px}}
+
+/* v6b 圖片區：模糊底＋完整圖，不留白也不裁切 */
+.ph-slot.icon,.ph-slot{background:#FDF3E9}
+.ph-slot::before{content:"";position:absolute;inset:-20px;background:var(--bg) center/cover no-repeat;filter:blur(20px);opacity:.9}
+.ph-slot img,.ph-slot.icon img{background:none;z-index:1;object-fit:contain}
+.ph-slot img[data-user]{object-fit:cover;z-index:2;background:#fff}
+.ph-slot .up,.ph-slot .cap{z-index:3}
+@media(min-width:900px){
+  .dayhero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);align-items:stretch}
+  .dayhero .art{height:auto;aspect-ratio:8/5;min-height:0}
+  .dayhero .txt{align-self:center;padding:22px 28px}
+}
+/* v6c 桌機：圖片欄加寬為 8:5，圖片不再縮成小方塊 */
+.dayhero{background:var(--paper)}
+@media(min-width:561px){
+  .tl-media{grid-template-columns:260px minmax(0,1fr);align-items:start}
+  .tl-media .ph-slot{aspect-ratio:8/5;min-height:0;align-self:start;border-radius:0 0 18px 0}
+}
+
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#home"><i>🀄</i><span>湊一桌麻將尊老愛幼團</span></a>
+  <nav class="tabs" id="tabs" aria-label="主選單"></nav>
+</div></header>
+<main id="view"></main>
+<footer><img class="stone" id="stone" alt=""><div>湊一桌麻將尊老愛幼團 · 濟州島 2026.11.21–11.24</div><div style="margin-top:4px">Enjoy Jeju ♡　行程以 PDF 為準，標示「待確認」的資料請出發前再查證</div></footer>
+<button id="totop" type="button" aria-label="回到最上方" title="回到最上方"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15l7-7 7 7"/><path d="M5 20h14"/></svg></button>
+<script>
+/* ============================================================
+   👉 修改區：行程、餐廳、清單預設內容都在這裡（純文字，改引號 '...' 裡的字即可）
+   - 改完存檔，重新整理網頁就會更新。
+   - 不要刪掉逗號、引號、大括號；不確定時，先複製備份一份。
+   - 「待確認」= 資料我沒有查到或 PDF 沒寫，請你出發前確認後直接改成正確內容。
+   ============================================================ */
+
+const TRIP = {
+  groupName: '湊一桌麻將尊老愛幼團',
+  tripTitle: '濟州島 四天三夜自駕行程',
+  startDate: '2026-11-21',
+  dateLabel: '2026.11.21 — 2026.11.24',
+  people: 4,
+  intro: '四天三夜、四人同行的濟州島自駕旅行。第一天從濟州市區往西岸，第二天穿上韓服、到山君不離賞芒草，入住城山；第三天搭船遊牛島，晚上回到濟州市；最後一天輕鬆返台。',
+  facts: [
+    { v: '4 天 3 夜', l: '11/21（六）– 11/24（二）' },
+    { v: '濟州市 → 城山', l: '住宿：Hotel Leo × 2 晚、Co-op City × 1 晚' },
+    { v: '自駕租車', l: '冬季請特別注意日落與路面' },
+    { v: '4 人同行', l: '台北 TPE ⇄ 濟州 CJU' },
+  ],
+
+  /* ---------- 航班（來源：PDF＋訂單截圖＋簡報圖，三者一致） ---------- */
+  flights: [
+    { dir: '去程', no: 'Jin Air LJ942', date: '11/21（六）', dep: '02:45', depPort: '台北 TPE · GMT+8', arr: '06:05', arrPort: '濟州 CJU · GMT+9', dur: '2 小時 20 分' },
+    { dir: '回程', no: 'Tigerair IT655', date: '11/24（二）', dep: '11:00', depPort: '濟州 CJU · GMT+9', arr: '12:15', arrPort: '台北 TPE · GMT+8', dur: '2 小時 15 分' },
+  ],
+
+  /* ---------- 住宿 ---------- */
+  hotels: [
+    { id: 'leo1', name: 'Hotel Leo', kr: '호텔 리오', city: '濟州市', nights: 'Day 1 → Day 2', checkIn: '11/21 14:00 起', checkOut: '11/22 11:00 前',
+      addr: '제주특별자치도 제주시 삼무로 14（14 Sammu-ro, Jeju-si）', phone: '064-754-7000', q: '호텔리오 제주 삼무로 14', photo: 'leo',
+      note: '訂房頁面顯示的時段，不代表一定能在該時間入住／退房，實際依飯店規定。06:05 抵達、14:00 才能入住 → 請先詢問寄放行李。',
+      shop: ['飯店與購物中心相連（Expedia／Hotels.com 描述：connected to a shopping center）', '步行 1–3 分有 BHC、연동본가、황가네제주뚝배기 等餐廳與咖啡店（Expedia 附近列表）', '롯데마트 제주점（제주시 연북로 1，노형동）：大型超市，距離／車程待確認', '신라면세점 제주店（제주시 노연로 69，연동）：免稅店，營業時間待確認', '마트로 탑동점：回鮮、熟食齊全的大型超市，近東門市場（約 10 分車程，粗估）'] },
+    { id: 'coop', name: 'Co-op City Hotel Seongsan', kr: '코업시티호텔 성산', city: '城山', nights: 'Day 2 → Day 3', checkIn: '11/22 15:00 起', checkOut: '11/23 11:00 前',
+      addr: '제주특별자치도 서귀포시 성산읍 성산리 250（完整門牌：待確認）', phone: '064-780-9800', q: '코업시티호텔 성산', photo: 'coop',
+      note: '位於城山日出峰一帶，離城山港很近，適合隔天搭船去牛島。',
+      shop: ['城山一帶我沒有查到「大型購物中心」；多為小型超市、便利商店與紀念品店（待確認）', '안녕성산（紀念品雜貨店，城山日出峰正前方，09:00–20:00，可用日出峰停車場，第三方資料）', '城山港周邊（chengshan.kr 附近頁）：성산포항 公共廁所（24 小時，城山登用路 130-21）、客運碼頭廁所（僅營業時間）、그리운바다성산포 餐廳（城山登用路 94，營業時間待確認）、고성오일시장（古城五日集市，開市日待確認）、성산일출도서관、성산보건지소（衛生所，急病可先問）',
+      '要採買大量物品，建議 Day 1 或 Day 3 在濟州市區（롯데마트 제주점等）處理；城山的超市請在 NAVER 搜尋「성산 마트」確認營業時間'] },
+    { id: 'leo2', name: 'Hotel Leo', kr: '호텔 리오', city: '濟州市', nights: 'Day 3 → Day 4', checkIn: '11/23 14:00 起', checkOut: '11/24 11:00 前',
+      addr: '제주특별자치도 제주시 삼무로 14（14 Sammu-ro, Jeju-si）', phone: '064-754-7000', q: '호텔리오 제주 삼무로 14', photo: 'leo',
+      note: '第三晚再次入住。11/24 退房 11:00 與班機起飛時間相同，務必提早退房、還車。',
+      shop: ['與 Day 1 同一間飯店：相連購物中心、롯데마트 제주점、신라면세점 제주店（見 Day 1）', '離開前最後採買：마트로 탑동점（近東門市場）、機場免稅店（出境後，請預留時間）'] },
+  ],
+
+  /* ---------- 待確認事項（會顯示在首頁與每日頁面，可勾選已完成） ---------- */
+  flags: [
+    { id: 'f5', day: 1, level: '資料不足', text: 'Day 1：「彩虹海岸道路」與「西岸景點／海邊散步」PDF 沒有寫具體地點。',
+      detail: '彩虹海岸道路常見是咸德～西烽（Hamdeok）一帶，但 PDF 沒指定；西岸景點沒有店名。每個景點卡片上都可以自行輸入地點名稱，輸入後會自動產生 Google／NAVER 連結。' },
+    { id: 'f9', day: 0, level: '預訂確認', text: '租車已有訂單（Jeju Autohouse，預約編號 2622774402）；Klook 韓服也已訂購。', detail: '租車：11/21 08:00 取車、11/24 08:00 還車，營業時間 06:00–23:00，總金額 373,490 KRW。仍待確認：機場到取車點的接駁方式、能否提早取車（06:05 抵達、08:00 取車）、還車超時規定。Klook 韓服的店家地點截圖沒有寫，請把店名貼給我，我再補進行程。' },
+    { id: 'f10', day: 2, level: '需確認', text: 'Day 2：彩妝加購是否可在 2 小時內完成，以店家／Klook 為準。', detail: 'PDF 寫「彩妝是否計入兩小時，仍以店家／Klook 確認為準」。另外韓服店家地點 PDF 沒寫，請填入。' },
+    { id: 'f12', day: 1, level: '需確認', text: 'Day 1 晚上「落火咖啡廳」＝熔岩咖啡店 FLOWAVE（플로웨이브），朋友想看表演，場次時間待確認。', detail: '地址：제주시 한림읍 장원길 63-10、電話 0507-1305-9367。營業時間我查到的是 15:00–22:00（最後點餐 21:00，2024 年 6 月起），來源是第三方網站，出發前請再確認，也問一下是否需要預約。位置在西岸翰林，所以 Day 1 改成先往東、再往西。' },
+    { id: 'f13', day: 1, level: '需確認', text: 'Day 1：Hugely Jeju 約 11:00 才開門（第三方資料），我把它排在從東邊回來之後。', detail: '你原本說 Hugely 在機場出來之後去。因為它約 11:00 才開、又在機場／取車點附近，順路排在回程比較順；若想最先去，可以把它搬到取車之後，早餐順便在那附近吃。' },
+  ],
+  verified: '已核對：航班（LJ942／IT655）、三段住宿的入住與退房時間，在 PDF、簡報圖、訂單截圖三份資料中一致。',
+
+  /* ---------- 每日行程 ---------- */
+  days: [
+    {
+      n: 1, date: '11/21', weekday: '六', title: '抵達濟州・取車・東北岸・Hugely・西岸・FLOWAVE', art: 'road',
+      summary: '清晨 06:05 抵達，08:00 取車，先往東：彩虹海岸道路、倫敦貝果；回程順路 Hugely、入住 Hotel Leo、YYMMDD，傍晚往西岸看夕陽，晚上到熔岩咖啡店 FLOWAVE 看表演。',
+      hotel: 'leo1',
+      stops: [
+        { id: 'd1a', type: 'flight', time: '06:05', name: '抵達濟州國際機場', kr: '제주국제공항', art: 'ic_plane', ll: [33.5113, 126.4930],
+          desc: 'LJ942 06:05 抵達 → 入境、領行李 → 在機場附近吃早餐 → 08:00 取車。取車時間已訂在 08:00，中間大約有 1 小時可以吃早餐（見下方餐廳參考）。', addr: '제주특별자치도 제주시 공항로 2', q: '제주국제공항', stay: '約 1 小時（入境＋領行李）', stayFrom: '建議',
+          tips: ['取車訂的是 08:00、營業時間 06:00 起；若入境很快，可以打電話問能不能提早取車（待確認）。', '冬季早晨氣溫低，先設定好導航再出發。'],
+          drive: { t: '約 10–15 分', n: '機場 → Jeju Autohouse（龍潭，粗估）' } },
+        { id: 'd1r', type: 'transport', time: '08:00', name: '取車：Jeju Autohouse', kr: '제주 오토하우스', art: 'ic_car', ll: [33.5090, 126.5260], q: 'Jeju Autohouse 용해로 92', rental: true,
+          desc: '訂單資料（來自你給的截圖）：預約編號 2622774402；車型 Minivan，CARNIVAL (D) 9P（9 人座柴油）；碰撞損害免責險（CDW）含 0 KRW 自負額；附加項目：無；總金額 373,490 KRW（約 NT$ 9,179，以 1：40.69 換算）。取車 11/21 08:00、還車 11/24 08:00。', addr: '92, Yonghae-ro, Jeju-si, Jeju-do, Korea（용해로 92）', hours: '06:00–23:00（取車與還車同一個地點）', stay: '約 30 分（辦手續＋檢查車況）', stayFrom: '建議',
+          tips: ['帶：護照、台灣駕照＋國際駕照（IDP）、信用卡（押金用）、預約確認單。', '拍下車子四周與內裝，確認油量規定（柴油車：加油時請選「경유」）。', '柴油的韓文是「경유（Diesel）」，加油站別加錯。', '到機場的接駁方式截圖沒有寫，請問清楚（待確認）。'],
+          drive: { t: '約 30 分', n: 'Autohouse → 咸德彩虹海岸道路（粗估）' } },
+        { id: 'd1b', type: 'sight', time: '約 08:40', name: '彩虹海岸道路・拍照散步', kr: '무지개 해안도로', art: 'road', custom: true, ll: [33.5435, 126.6700], q: '함덕 무지개 해안도로',
+          desc: '彩色矮牆沿著海岸線延伸的拍照景點。PDF 沒有指定是哪一段，我先排在北海岸往東的路上（咸德一帶，位置待確認）：早上光線好、人也少。', addr: '待確認（PDF 未指定具體地點，地圖上是示意位置）', stay: '約 30–45 分', stayFrom: '建議', flags: ['f5'],
+          tips: ['海邊風大，帽子、圍巾、手套要戴好。', '停車請停在指定停車場，不要停在海岸道路上。'],
+          drive: { t: '約 15–20 分', n: '到倫敦貝果濟州店（東福路，粗估）' } },
+        { id: 'd1c', type: 'meal', time: '約 09:30', name: '倫敦貝果博物館 濟州店（全程只去一次）', kr: '런던베이글뮤지엄 제주', art: 'ic_bagel', ll: [33.5560, 126.7570], q: '런던베이글뮤지엄 제주', foodId: 'londonbagel',
+          desc: '人氣貝果店，PDF 標示全程只安排一次。位置在東北岸，所以第一天先往東走、拿完貝果再一路往西回濟州市，避免來回橫跨。', addr: '제주특별자치도 제주시 구좌읍 동복로 85（1F，2동）', stay: '約 60–90 分（尖峰需排隊，約 1 小時，第三方資料）', stayFrom: '建議', flags: [],
+          tips: ['營業約 08:00–18:00，通常賣完即收（待確認）。', '先排隊取號，等待時可到旁邊海邊走走。'],
+          drive: { t: '約 50–60 分', n: '東岸 → 濟州市區 Hugely（粗估，請以導航為準）' } },
+        { id: 'd1f', type: 'sight', time: '約 11:30', name: 'Hugely Jeju', kr: '휴즐리 제주', art: 'ic_camera', ll: [33.5156, 126.5120], q: '휴즐리 제주', phone: '0507-1375-9774', foodId: 'hugely',
+          desc: '我把 Hugely 從「第一站」挪到從東邊回來之後：它約 11:00 才開門（第三方資料），而且就在機場、取車點附近，回程順路。若你們想一出機場就去，可以把它移到最前面。', addr: '제주시 흥운길 83（용담2동 434）', stay: '約 60 分', stayFrom: '建議', flags: ['f13'], hours: '約 11:00–21:00（最後點餐 20:30，第三方資料，待確認）',
+          drive: { t: '約 10–15 分', n: 'Hugely → Hotel Leo（先放行李、午餐）' } },
+        { id: 'd1g', type: 'hotel', time: '14:00 起', name: '入住 Hotel Leo（放行李）', kr: '호텔 리오', art: 'leo', ll: [33.4901, 126.4927], q: '호텔리오 제주 삼무로 14', phone: '064-754-7000', hotelId: 'leo1',
+          deadline: '入住：14:00 起，沒有查到入住截止時間（櫃台 24 小時，第三方資料；若很晚到，建議先電話通知）。退房：11/22 11:00 前。',
+          desc: '飯店在連洞，位於「東邊 → 西邊」的中間，所以我把入住排在這裡：先放行李、休息，再出發去西岸。14:00 才能入住，若提早到，請先寄放行李。午餐可在這附近吃。', addr: '제주시 삼무로 14', stay: '約 30–60 分（含午餐）', stayFrom: '建議',
+          drive: { t: '約 3–5 分（或步行）', n: 'Hotel Leo → YYMMDD（同在連洞）' } },
+        { id: 'd1e', type: 'shop', time: '約 14:30', name: 'YYMMDD 護手霜禮品店', kr: 'YYMMDD', art: 'ic_gift', ll: [33.4870, 126.4900], q: '제주시 연동 273-19', naverLink: 'https://map.naver.com/p/entry/place/2050053848?placePath=%2Freview&c=15.00,0,0,0,dh',
+          desc: '護手霜禮品店。營業時間每天 14:00–22:00（你提供），所以排在下午入住之後。NAVER 按鈕是你提供的地點頁。', addr: '제주시 연동 273-19（濟州市蓮洞 273-19，PDF）', stay: '約 20–30 分', stayFrom: '建議', flags: [], hours: '每天 14:00–22:00（你提供）',
+          drive: { t: '約 45–60 分', n: '連洞 → 西岸（涯月／翰林，粗估）' } },
+        { id: 'd1d', type: 'sight', time: '約 16:00', name: '西岸景點／海邊散步', kr: '', art: 'sea', custom: true, ll: [33.4640, 126.3100],
+          desc: 'PDF 只寫「西岸景點／海邊散步」，沒有指定景點。排在 FLOWAVE 之前，剛好看夕陽、再吃晚餐。請在下方輸入你們選的景點（例如：涯月、挾才海水浴場等），之後會自動產生地圖連結。地圖上的位置只是示意。', addr: '待確認（PDF 未指定）', stay: '約 60–90 分', stayFrom: '建議', flags: ['f5'],
+          tips: ['日落約 17:30 前後，傍晚拍照要把握時間。', '西岸面海、風大，注意保暖。', '晚餐可在西岸順路吃（約 18:00），再去 FLOWAVE 看表演。'],
+          drive: { t: '約 20–30 分', n: '西岸 → 熔岩咖啡店 FLOWAVE（翰林，粗估）' } },
+        { id: 'd1h', type: 'meal', time: '晚上（表演時間待確認）', name: '熔岩咖啡店 FLOWAVE（晚上・看表演）', kr: '플로웨이브', art: 'ic_cafe', ll: [33.3900, 126.2700], q: '플로웨이브 제주 한림읍 장원길 63-10', phone: '0507-1305-9367',
+          desc: '依你的更正：FLOWAVE（落火咖啡廳）要在晚上去，朋友想看表演。表演的場次與時間我查不到，請向店家確認（可打電話或看店家 Instagram），再從表演開始時間往回推出發時間。位置在西岸翰林，所以前面的 YYMMDD 和西岸景點都排在它之前。', addr: '제주시 한림읍 장원길 63-10（제주특별자치도 제주시 한림읍 장원길 63-10）', stay: '約 90 分（依表演時間調整）', stayFrom: '建議', flags: ['f12'], hours: '15:00–22:00（最後點餐 21:00；第三方資料，2024/6 起的時間，出發前請再確認）',
+          tips: ['表演時間待確認：請先問清楚是否需要預約或購票、幾點開始。', '同一址另有「FLOWAVE Sands House」（住宿／空間租借），不是咖啡店，請別搜錯。', '回飯店約 50–60 分，夜間開車請放慢；22:00 打烊。'],
+          drive: { t: '約 50–60 分', n: 'FLOWAVE → Hotel Leo（夜間返程）' } },
+        { id: 'd1z', type: 'transport', time: '約 21:30', name: '回 Hotel Leo 休息', kr: '호텔 리오', art: 'ic_bed', ll: [33.4901, 126.4927], q: '호텔리오 제주 삼무로 14',
+          desc: '今天已經入住，晚上回到飯店休息。11/22 要先退房再去韓服體驗（見 Day 2）。', addr: '제주시 삼무로 14', stay: '過夜', stayFrom: 'PDF' },
+      ],
+      meals: [
+        { k: '抵達後早餐（08:00 取車前）', ids: ['ujin', 'wonjomipung', 'meokdol', 'eunhui'] },
+        { k: '午餐（Hugely 之後、入住前後，市區）', ids: ['donsadon', 'meokdol'] },
+        { k: '晚餐（約 18:00，看表演前先吃；熟成道在老衡洞，往西岸路上順路）', ids: ['sukseongdo', 'dohuhaenyeo'] },
+      ],
+      tips: [
+        '日落約 17:30 前後（請以當日查詢為準）：下午入住、逛完 YYMMDD 後再出發往西岸，剛好看夕陽。',
+        '韓國靠右行駛，測速相機很多，導航會語音提醒。',
+        'Google Maps 在韓國無法提供完整的開車導航，請用 NAVER Map／Kakao Map，或在租車的車載導航輸入「電話號碼」最準。',
+      ],
+    },
+    {
+      n: 2, date: '11/22', weekday: '日', title: '韓服體驗 × 山君不離', art: 'hanbok',
+      summary: '上午韓服體驗，午餐後到山君不離看芒草，有時間再去 Snoopy Garden，下午入住城山。',
+      hotel: 'coop',
+      stops: [
+        { id: 'd2a', type: 'hotel', time: '韓服前', name: 'Hotel Leo 退房', ll: [33.4901, 126.4927],
+          deadline: '退房截止：11/22 11:00 前。行程以韓服為主：先退房、行李放車上（或寄放櫃台）再去韓服。', kr: '호텔 리오', q: '호텔리오 제주 삼무로 14', phone: '064-754-7000', hotelId: 'leo1',
+          desc: '依你的決定：先退房、再去韓服（10:00 開始）。退房截止 11:00，不影響行程。', addr: '제주시 삼무로 14', stay: '約 20–30 分', stayFrom: '建議',
+          drive: { t: '依韓服店位置', n: '店家地點待確認' } },
+        { id: 'd2b', type: 'sight', time: '10:00–12:00', name: 'Klook 韓服租借體驗（Jeju Hue Hanbok）', kr: '한복 체험', art: 'hanbok', custom: true, links: [{ l: 'Instagram：jeju_hue_hanbok', u: 'https://www.instagram.com/jeju_hue_hanbok/' }],
+          desc: '已在 Klook 訂購。先在 Hotel Leo 退房、行李放車上，再去體驗韓服。含彩妝加購、換裝、自行拍照，約 2 小時；彩妝是否計入兩小時，以店家／Klook 確認為準。', addr: '店家只有 Instagram（jeju_hue_hanbok），沒有查到地址；請看 IG 或 Klook 憑證，把地址輸入下方，就會產生地圖連結', stay: '約 2 小時', stayFrom: 'PDF', flags: ['f10'],
+          tips: ['穿韓服行動較不方便，請把車停好、行李放車內。', '冬季戶外拍照請另備外套或披肩。'],
+          drive: { t: '依店家位置，約 35–50 分', n: '到午餐／山君不離（若店家在濟州市區，粗估）' } },
+        { id: 'd2c', type: 'meal', time: '約 12:00', name: '午餐', art: 'ic_fork', kr: '교래손칼국수（參考）', q: '교래손칼국수', phone: '064-782-9870', foodId: 'gyorae',
+          desc: 'PDF 只寫「午餐」，沒有指定餐廳。餐廳專區推薦順路的教來土雞刀削麵（與山君不離同一條路），僅供參考，不影響原行程。', addr: '제주시 조천읍 비자림로 645', stay: '約 60 分', stayFrom: '建議',
+          hours: '10:30–17:00，週二公休（第三方資料，待確認）',
+          drive: { t: '約 5–10 分', n: '到山君不離（同為比自林路上，粗估）' } },
+        { id: 'd2d', type: 'sight', time: '下午', name: '山君不離（賞芒草）', kr: '산굼부리', art: 'grass', ll: [33.4337, 126.6955], q: '산굼부리',
+          desc: '火山口與芒草原，11 月是賞芒草的季節。', addr: '제주시 조천읍 비자림로 768（待確認）', stay: '約 40–60 分', stayFrom: '建議', hours: '待確認（入場費、閉園時間請出發前查）',
+          tips: ['草原風大，芒草逆光拍照最美，日落約 17:30 前後。', '比自林路一帶樹蔭多，冬季路面可能濕滑結冰，請減速。'],
+          drive: { t: '約 20–30 分', n: '到 Snoopy Garden（粗估）' } },
+        { id: 'd2e', type: 'shop', time: '', name: 'Snoopy Garden（有時間再去）', kr: '스누피가든 제주', art: 'snoopy', q: '스누피가든 제주',
+          desc: 'PDF 寫：若時間與體力允許，只安排購買周邊（約 30–60 分鐘），不安排完整園區行程；時間不夠可取消。', addr: '待確認', stay: '約 30–60 分', stayFrom: 'PDF', hours: '待確認', flags: [],
+          drive: { t: '約 30–40 分', n: '到 Co-op City Hotel Seongsan（粗估）' } },
+        { id: 'd2f', type: 'hotel', time: '15:00 起', name: '入住 Co-op City Hotel Seongsan', kr: '코업시티호텔 성산', ll: [33.4590, 126.9340],
+          deadline: '入住：15:00 起，入住截止時間待確認（建議預約時詢問；晚到請電話通知）。退房：11/23 11:00 前。', q: '코업시티호텔 성산', phone: '064-780-9800', hotelId: 'coop',
+          desc: '最早 15:00 可入住，實際時間依飯店安排。', addr: '서귀포시 성산읍 성산리 250（完整門牌待確認）', stay: '過夜', stayFrom: 'PDF',
+          tips: ['若 Snoopy Garden 取消，可提早抵達城山，在日出峰周邊走走。'] },
+      ],
+      meals: [
+        { k: '午餐', ids: ['sukseongdo', 'gyorae', 'meokdol', 'samdae'] },
+        { k: '晚餐（城山）', ids: ['maenasik', 'jinmi', 'cocomama', 'tongbal', 'seongsansusan'] },
+      ],
+      tips: [
+        '11/22（日）是當月第四個週日，部分店家可能公休，出發前先確認營業狀況。',
+        '日落約 17:30 前後，城山傍晚天色暗得快，晚上請避免再開長途。',
+        '行程以韓服為主：先退房（截止 11:00）、行李放車上，再去 10:00 的韓服體驗。',
+      ],
+    },
+    {
+      n: 3, date: '11/23', weekday: '一', title: '牛島一日遊・返回濟州市', art: 'sea',
+      summary: '退房後到城山港搭船去牛島，環島看海岸風景、午餐，下午搭船回城山、開車返回濟州市，再次入住 Hotel Leo。',
+      hotel: 'leo2',
+      stops: [
+        { id: 'd3a', type: 'hotel', time: '11:00 前', name: 'Co-op City Hotel Seongsan 退房', kr: '코업시티호텔 성산', ll: [33.4590, 126.9340],
+          deadline: '退房截止：11/23 11:00 前。可先退房、把行李放車上再去搭船。', q: '코업시티호텔 성산', phone: '064-780-9800', hotelId: 'coop',
+          desc: '訂房頁面顯示 11:00 前退房，退房後前往城山港搭船。', addr: '서귀포시 성산읍 성산리 250（待確認）', stay: '約 20 分', stayFrom: '建議',
+          drive: { t: '約 5–10 分', n: '到城山港（粗估）' } },
+        { id: 'd3b', type: 'transport', time: '', name: '城山港 → 搭船前往牛島', kr: '성산포항 종합여객터미널', art: 'ic_ship', ll: [33.4686, 126.9327], q: '성산포항 종합여객터미널',
+          desc: '把車停在城山港停車場，帶護照購票搭船，船程約 15 分。', addr: '제주 서귀포시 성산읍 성산등용로 112-7（綜合客運碼頭，來源：第三方整理）', stay: '購票＋候船約 30 分', stayFrom: '建議',
+          tips: [
+            '【班次時間・務必當天或前一天確認】城山港 → 牛島每 30 分一班（07:30–17:00）；島上回城山：下牛目洞港 07:30–17:00、天津港 07:30–17:00（約每小時一班）。完整時刻表在上方「牛島船班」分頁（來源 chengshan.kr，無冬夏差異說明，實際以售票處為準）。',
+            '【查詢】城山港售票處 064-782-5671（牛島事務所 064-783-0448）。出發前一天與當天早上都再確認；回程建議搭 16:00 以前的船。',
+            '【天候停航】強風、浪大時可能停航或臨時改班；請預留一個備案（改在城山周邊或濟州市區），並避免搭到最後幾班。',
+            '【租車能不能上牛島】一般租車上島限制很嚴：多限「孕婦、6 歲以下幼童、65 歲以上同行者，或在島上住 1 晚以上」才可載運（第三方整理）。你們計畫在島上租電動摩托車，所以車停城山港即可。',
+            '【手續】需填「승선신고서」入島、出島各一張（姓名、生日、性別、電話），並帶護照。船票約 ₩11,000／人往返（2026 年起，含島嶼公園入園費，第三方資料）；停車每日上限約 ₩8,000。',
+            '【港口周邊】城山浦港 公共廁所 24 小時開放；碼頭客運站廁所只在營業時間開放；旁邊有 그리운바다성산포 餐廳（城山登用路 94），營業時間待確認（來源：chengshan.kr 附近頁）。',
+            '【港口】城山出發可到天津港（천진항）或下牛目洞港（하우목동항），回程請確認要搭哪個港的船。'],
+          drive: { t: '船程約 15 分', n: '到牛島天津港' } },
+        { id: 'd3c', type: 'sight', time: '', name: '牛島環島・海岸風景・午餐', kr: '우도', art: 'island', ll: [33.5040, 126.9540], q: '우도 천진항',
+          desc: '島上租電動車／單車環島，欣賞海岸風景並午餐。PDF 沒有指定景點；下列為常見點，僅供參考：下高水洞海水浴場、黑沙灘（검멀레）、牛島峰、西濱白沙。',
+          addr: '제주시 우도면 우도해안길 一帶', stay: '約 4–5 小時', stayFrom: '建議',
+          refs: [
+            { name: '下高水洞海水浴場', q: '하고수동해수욕장' }, { name: '黑沙灘', q: '검멀레해변' }, { name: '牛島峰', q: '우도봉' }, { name: '西濱白沙', q: '서빈백사' } ],
+          tips: [
+            '【租電動摩托車】請帶：國際駕照（IDP）＋台灣駕照＋護照（租車行通常三樣都要看）。',
+            '【駕照類別（待確認）】台灣駕照與 IDP 要有「機車」類別；有些租車行對可租車型（例如 50cc 以下的電動車）或駕照類別有規定，出發前請向租車行確認，沒有機車資格的人請改搭巴士、坐後座或租電動自行車。',
+            '【保險】牛島有租車行不替駕駛或車輛投保的情況，出事時可能由租用人自負（台灣新聞 2025 報導）。請先問清楚保險範圍、戴好安全帽、慢速騎乘、不要騎到天黑。',
+            '牛島冬季風很大，防風外套、帽子手套必備。', '島上餐廳多在 16:00–17:00 就收，午餐不要太晚。', '搭回城山的末班船時間要先抓好，預留 30 分以上緩衝。'],
+          drive: { t: '船程約 15 分', n: '搭船回城山港（請抓好末班船時間）' }, foods: ['hahahoho', 'hoeyang', 'udowangja'] },
+        { id: 'd3d', type: 'transport', time: '下午', name: '回城山港・取車・開回濟州市', kr: '', art: 'ic_car', q: '성산포항 종합여객터미널',
+          desc: '下午返回濟州市區（PDF 寫法）。城山 → 濟州市區約 60–70 分（粗估）。', addr: '待確認', stay: '—', stayFrom: '',
+          tips: ['日落約 17:30 前後，若搭較晚的船，會在天黑後開車回市區，請放慢速度。'],
+          drive: { t: '約 60–70 分', n: '城山 → 濟州市區（粗估）' } },
+        { id: 'd3e', type: 'hotel', time: '返回後', name: '入住 Hotel Leo', kr: '호텔 리오', ll: [33.4901, 126.4927], q: '호텔리오 제주 삼무로 14', phone: '064-754-7000', hotelId: 'leo2',
+          deadline: '入住：14:00 起（以行程為主，回到市區後再入住；入住截止時間沒有查到，晚到請電話通知）。退房：11/24 11:00 前，但班機同為 11:00 起飛，務必提早。',
+          desc: '最早 14:00 可入住；如提早抵達可先寄放行李（簡報圖備註）。', addr: '제주시 삼무로 14', stay: '過夜', stayFrom: 'PDF' },
+      ],
+      meals: [
+        { k: '早餐（城山）', ids: ['jieun', 'buddumak', 'jinmi'] },
+        { k: '牛島午餐', ids: ['hahahoho', 'hoeyang', 'udowangja'] },
+        { k: '晚餐（濟州市）', ids: ['chakhan', 'sukseongdo', 'dohuhaenyeo', 'donsadon'] },
+      ],
+      tips: ['出發前一晚與當天早上，打電話或看船公司公告確認船班；若停航，需要備案（例如改為城山周邊／濟州市區行程）。', '牛島：國際駕照＋台灣駕照＋護照（租電動摩托車）；租車能否上島與冬季船班見「城山港」卡片。', '回濟州市區前先把油加滿（隔天要還車，請依租車規定加油）。'],
+    },
+    {
+      n: 4, date: '11/24', weekday: '二', title: '返程', art: 'air',
+      summary: '早上 07:00 前後退房，08:00 還車（Jeju Autohouse），前往機場，11:00 搭機返台（無其他行程）。',
+      hotel: 'leo2',
+      stops: [
+        { id: 'd4a', type: 'hotel', time: '約 07:00', name: 'Hotel Leo 退房', kr: '호텔 리오', ll: [33.4901, 126.4927],
+          deadline: '退房截止：11/24 11:00 前；但 08:00 要還車、11:00 起飛，實際請在 07:00 前後退房。', q: '호텔리오 제주 삼무로 14', phone: '064-754-7000', hotelId: 'leo2',
+          desc: '飯店退房 11:00 前，但租車 08:00 要還、班機 11:00 起飛，務必早起退房。', addr: '제주시 삼무로 14', stay: '約 15 分', stayFrom: '建議',
+          drive: { t: '約 15–20 分', n: '到 Jeju Autohouse 還車（用 Autohouse 電話或地址導航）' } },
+        { id: 'd4b', type: 'transport', time: '08:00', name: '還車：Jeju Autohouse', kr: '제주 오토하우스', art: 'ic_car', ll: [33.5090, 126.5260], q: 'Jeju Autohouse 용해로 92', rental: true,
+          desc: '還車 11/24 08:00（訂單）。地點與取車相同：92, Yonghae-ro, Jeju-si。預約編號 2622774402；CDW 0 KRW 自負額。', addr: '92, Yonghae-ro, Jeju-si, Jeju-do, Korea（용해로 92）', hours: '06:00–23:00', stay: '約 20–30 分（檢查車況＋接駁）', stayFrom: '建議',
+          tips: ['先在附近加油站把油加滿（柴油：경유），並確認租車公司對油量的規定。', '超時還車是否加收費用，請先問清楚（待確認）。', '還車後到機場的接駁方式與時間，請預留緩衝。'],
+          drive: { t: '依接駁／計程車', n: 'Autohouse → 濟州機場（粗估 10–15 分）' } },
+        { id: 'd4c', type: 'flight', time: '11:00', name: '濟州機場 搭乘 Tigerair IT655', kr: '제주국제공항', art: 'ic_plane', q: '제주국제공항',
+          desc: '11:00 起飛 → 12:15 抵達台北 TPE。不安排其他景點。', addr: '제주특별자치도 제주시 공항로 2', stay: '依航空公司規定提前抵達（國際線常見約 2 小時前，請以航空公司公告為準）', stayFrom: 'PDF' },
+      ],
+      meals: [
+        { k: '早餐參考（班機 11:00，請早出發）', ids: ['ujin', 'wonjomipung', 'apbaengdi', 'meokdol'] },
+      ],
+      tips: ['冬季清晨氣溫低，路面可能有薄冰，開車請放慢。', '所有退稅、免稅品、伴手禮請在登機前處理，把時間抓寬。'],
+    },
+  ],
+
+  /* ---------- 餐廳專區 ----------
+     status：'ok' = 資料有查到來源；'check' = 營業時間/價格有待確認的部分已標「待確認」 */
+  restaurants: [
+    { id: 'londonbagel', tag: 'pdf', art: 'f_bagels', name: '倫敦貝果博物館 濟州店', kr: '런던베이글뮤지엄 제주', days: [1], meal: '早午餐', area: '濟州東北岸（舊左邑）', q: '런던베이글뮤지엄 제주',
+      addr: '제주 제주시 구좌읍 동복로 85（1F，2동）', hours: '每日約 08:00–18:00，賣完即收', closed: '無固定公休（假日營業時間可能調整）',
+      price: '約 ₩10,000–20,000／人（首爾店參考，濟州店待確認）', dishes: '培根馬鈴薯貝果三明治、火腿奶油貝果（招牌）、湯品',
+      near: '從彩虹海岸（咸德一帶）約 15–25 分車程（粗估）；PDF 行程內，全程只去一次', note: '尖峰排隊約 1 小時（第三方遊記）。位於東部，與「西岸」方向相反，見待確認事項。', status: 'check',
+      src: [{ t: 'Creatrip', u: 'https://creatrip.com/en/blog/13777' }, { t: 'Trip.com 遊記', u: 'https://ae.trip.com/moments/poi-london-bagel-museum-140714409' }] },
+    { id: 'hugely', tag: 'pdf', art: 'f_cake', name: 'Hugely Jeju 咖啡甜點', kr: '휴즐리 제주', days: [1], meal: '點心／咖啡', area: '濟州市 龍潭（近龍淵・龍頭岩）', q: '휴즐리 제주', phone: '0507-1375-9774',
+      addr: '제주시 흥운길 83（용담2동 434）', hours: '約 11:00–21:00（最後點餐 20:30）', closed: '待確認',
+      price: 'Gelabong 義式冰淇淋約 ₩12,000（舊資料）', dishes: '漢拏峰造型 Gelabong 義式冰淇淋、咖啡、甜點；二樓有波浪投影',
+      near: '距 Hotel Leo 約 10 分車程（粗估）；PDF 標示為「演出」，見待確認事項', note: 'PDF 寫「演出」，但查到是咖啡廳；請確認。', status: 'check',
+      src: [{ t: 'Mapstr', u: 'https://mapstr.com/place/7y5c7lgxi8' }, { t: 'Trip.com', u: 'https://ae.trip.com/restaurant/south%20korea/jeju/detail/Hugely%20Jeju-144315247' }] },
+    { id: 'myeongjin', art: 'f_bibim', name: '明珍鮑魚', kr: '명진전복', days: [1], meal: '午餐（備選）', area: '濟州東北岸（舊左邑・細花一帶）', q: '명진전복',
+      addr: '제주 제주시 구좌읍 해맞이해안로 1282', hours: '待確認', closed: '待確認',
+      price: '鮑魚粥 ₩13,000、鮑魚石鍋飯 ₩16,000、烤鮑魚 ₩30,000（舊資料）', dishes: '鮑魚粥、鮑魚石鍋飯、烤鮑魚、鮑魚生魚片',
+      near: '與倫敦貝果同在濟州東北岸，約 10–15 分車程（粗估）；若 Day 1 不走東部則不順路', note: '備選：適合在彩虹海岸／貝果之後吃一碗熱粥暖身。', status: 'check',
+      src: [{ t: '식신 報導', u: 'https://hotplacehunter.co.kr/theme/article/53776/' }] },
+    { id: 'donsadon', art: 'f_meat', name: '豚舍豚（돈사돈）本館', kr: '돈사돈 본관', days: [1, 3], meal: '晚餐', area: '濟州市區（近機場）', q: '돈사돈 제주 우평로 19',
+      addr: '제주 제주시 우평로 19（別館：광평동로 15）', hours: '待確認', closed: '待確認',
+      price: '黑豬肉 2 人份（600g）約 ₩66,000、泡菜鍋約 ₩9,000（舊資料）', dishes: '濟州黑豬根肉（厚切）、泡菜鍋、醃小魚醬（멜젓）',
+      near: '濟州市區，靠近機場／Hotel Leo 一帶（距離待確認，粗估 10 分車程內）', note: '店員代烤；需排隊取號，建議提早到。排煙較弱、衣服會沾味。四人行建議點 2 組。', status: 'check',
+      src: [{ t: '식신', u: 'https://www.siksinhot.com/P/10406' }, { t: 'Funliday', u: 'https://www.funliday.com/posts/?p=8747' }] },
+    { id: 'gyorae', art: 'f_noodle', name: '教來手工刀削麵（土雞刀削麵）', kr: '교래손칼국수', days: [2], meal: '午餐', area: '濟州市 朝天邑・比自林路（山君不離旁）', q: '교래손칼국수', phone: '064-782-9870',
+      addr: '제주 제주시 조천읍 비자림로 645', hours: '10:30–17:00', closed: '每週二公休（11/22 週日營業，仍請確認）',
+      price: '待確認（約 ₩10,000 上下，未查到最新價格）', dishes: '土雞刀削麵（토종닭칼국수）、蛤蜊刀削麵、拌刀削麵',
+      near: '與山君不離同在比自林路上，約 5–10 分車程（粗估）', note: '客人多、常需候位；有停車場。冬天來碗熱湯麵很適合。', status: 'ok',
+      src: [{ t: 'ktriptips', u: 'https://www.ktriptips.com/kor/food/2759603' }] },
+    { id: 'maenasik', art: 'f_bibim', name: '好吃食堂（燉刺鰽魚）', kr: '맛나식당', days: [2], meal: '晚餐', area: '城山日出峰周邊', q: '성산 맛나식당',
+      addr: '待確認（城山日出峰附近）', hours: '待確認', closed: '待確認',
+      price: '燉刺鰽魚（갈치조림）約 ₩13,000（舊資料，現價可能更高）', dishes: '燉刺鰽魚、燉鯖魚、牛島花生馬格利',
+      near: '距 Co-op City Hotel Seongsan 約 5–10 分車程（粗估）', note: '價格是舊報導，請以現場為準；店名需在 NAVER 確認是否同一家。Brunch 專欄（Visit Jeju 推薦整理）稱其為城山人氣老店、需早點排隊。', status: 'check',
+      src: [{ t: '식신 報導', u: 'https://hotplacehunter.co.kr/editorpick/article/62294/' }, { t: 'Brunch：제주 동쪽 맛집 지도', u: 'https://brunch.co.kr/@smartmap/34' }] },
+    { id: 'hahahoho', art: 'f_sand', name: '哈哈呵呵 黑豬漢堡（牛島）', kr: '하하호호', days: [3], meal: '午餐', area: '牛島（北側海岸路）', q: '우도 하하호호',
+      addr: '제주 제주시 우도면 우도해안길 532', hours: '10:30–17:00（最後點餐 16:00）', closed: '全年無休（舊資料，待確認）',
+      price: '待確認', dishes: '九左蒜黑豬漢堡（구좌마늘 흑돼지버거）、牛島花生黑豬漢堡、辣味黑豬漢堡',
+      near: '牛島北側海岸路，距天津港距離待確認；可看濟州本島景色', note: '石屋改建的小店，傍晚收得早。', status: 'check',
+      src: [{ t: 'ktriptips', u: 'https://www.ktriptips.com/kor/food/2854364' }] },
+    { id: 'hoeyang', art: 'f_noodle', name: '회양과국수군（牛島海鮮拉麵・水冷麵）', kr: '회양과국수군', days: [3], meal: '午餐（備選）', area: '牛島（西濱白沙海灘前）', q: '우도 회양과국수군',
+      addr: '待確認（西濱白沙海水浴場前）', hours: '待確認', closed: '待確認',
+      price: '待確認', dishes: '海鮮拉麵（해물라면）、물회、회국수',
+      near: '位於西濱白沙附近，有海景露台', note: '島上餐廳打烊早，抓緊午餐時段。', status: 'check',
+      src: [{ t: '식신', u: 'https://www.siksinhot.com/P/257864' }] },
+    { id: 'udowangja', art: 'f_orange', name: '牛島王子的故事（花生冰淇淋）', kr: '우도왕자이야기', days: [3], meal: '點心', area: '牛島（黑沙灘一帶）', q: '우도왕자이야기',
+      addr: '제주 제주시 우도면 우도해안길 1122 1층', hours: '約 08:30–18:00（船停駛則休息）', closed: '待確認',
+      price: '花生／漢拏峰冰淇淋約 ₩6,000（舊資料）', dishes: '牛島花生冰淇淋、花生麵包',
+      near: '黑沙灘（검멀레）附近', note: '牛島必吃點心；冬天吃冰要看個人。', status: 'check',
+      src: [{ t: 'Trvlogue', u: 'https://www.trvlogue.com/ko/udo-wangja-peanut-ice-cream' }] },
+    { id: 'chakhan', art: 'f_table', name: '善良之家（燉刺鰽魚）', kr: '착한집', days: [3], meal: '晚餐', area: '濟州市區', q: '제주 착한집 갈치조림',
+      addr: '待確認（濟州市）', hours: '10:00–22:00', closed: '每月第四個週日（11/23 週一營業）',
+      price: '燉刺鰽魚／烤刺鰽魚各約 ₩25,000、鮮魚生魚片 ₩30,000–50,000（舊資料）', dishes: '燉刺鰽魚（갈치조림）、烤刺鰽魚、鮮魚生魚片',
+      near: '濟州市區（距 Hotel Leo 待確認）', note: '店名在 NAVER 上要確認是同一家再出發。', status: 'check',
+      src: [{ t: '식신 報導', u: 'https://hotplacehunter.co.kr/editorpick/article/62294/' }] },
+    { id: 'ujin', art: 'f_bibim', name: '友進醒酒湯（蕨菜肉絲湯）', kr: '우진해장국', days: [1, 4], meal: '早餐', area: '濟州市區（三徒二洞，近機場）', q: '우진해장국 서사로 11',
+      addr: '제주 제주시 서사로 11', hours: '06:00–22:00（jeju.com 2026/11/10 整理）', closed: '春節／中秋等連假（11/21–24 一般營業）',
+      price: '蕨菜肉絲湯、馬尾藻湯各約 ₩10,000–11,000（2025 報導）', dishes: '蕨菜肉絲湯（고사리육개장）、馬尾藻豬肉湯（몸국）、사골해장국',
+      near: '距機場約 3.7 km（jeju.com）', note: '早晨客多，可外帶。Day 1 到達當天也可當作早餐。', status: 'ok',
+      src: [{ t: 'jeju.com 機場周邊美食', u: 'https://www.jeju.com/blog/restaurants-jeju-airport-haejangguk' }, { t: 'Marie Claire Korea', u: 'https://www.marieclairekorea.com/?p=461933' }, { t: '식신', u: 'https://www.siksinhot.com/P/257720' }] },
+    { id: 'wonjomipung', art: 'f_noodle', name: '原祖美豐醒酒湯 本店', kr: '원조미풍해장국 본점', days: [1, 4], meal: '早餐', area: '濟州市區（距機場約 4.0 km）', q: '원조미풍해장국 본점 제주',
+      addr: '待確認', hours: '05:00–15:00', closed: '無固定公休（jeju.com 整理）', price: '待確認', dishes: '醒酒湯（해장국）類',
+      near: '距機場約 4.0 km（jeju.com）；05:00 就開，最適合 11:00 班機的 Day 4', note: '營業時間來自 jeju.com 的機場周邊整理（2026/11/10）。', status: 'check',
+      src: [{ t: 'jeju.com 機場周邊美食', u: 'https://www.jeju.com/blog/restaurants-jeju-airport-haejangguk' }] },
+    { id: 'meokdol', art: 'f_latte', name: '먹돌고기국수 濟州本店', kr: '먹돌고기국수 제주본점', days: [1, 2, 4], meal: '早餐／午餐', area: '濟州市區（距機場約 1.2 km）', q: '먹돌고기국수 제주본점',
+      addr: '待確認', hours: '08:00–20:00', closed: '無固定公休（jeju.com 整理）', price: '待確認', dishes: '豬肉麵（고기국수）',
+      near: '距機場僅約 1.2 km，Day 1 抵達後與 Day 4 還車前都方便', note: '營業時間來自 jeju.com（2026/11/10）。', status: 'check',
+      src: [{ t: 'jeju.com 機場周邊美食', u: 'https://www.jeju.com/blog/restaurants-jeju-airport-haejangguk' }] },
+    { id: 'eunhui', art: 'f_table', name: '恩熙家醒酒湯 本店', kr: '은희네해장국 본점', days: [1, 4], meal: '早餐', area: '濟州市 老衡洞（距機場約 5.8 km）', q: '은희네해장국 제주 원노형로 40',
+      addr: '제주 제주시 원노형로 40', hours: '06:00–15:00（週末到 14:00）', closed: '每週四公休（11/21 週六、11/24 週二皆營業）', price: '待確認', dishes: '內臟湯（내장탕）、血旺醒酒湯（선지해장국）',
+      near: '距機場約 5.8 km', note: '內臟湯有網友評價口感好（polle 評論）；注意與首爾「은희네」無關係。', status: 'check',
+      src: [{ t: 'jeju.com 機場周邊美食', u: 'https://www.jeju.com/blog/restaurants-jeju-airport-haejangguk' }, { t: 'polle 評論', u: 'https://polle.com/place/47lws4/%EC%9D%80%ED%9D%AC%EB%84%A4%20%ED%95%B4%EC%9E%A5%EA%B5%AD' }] },
+    { id: 'apbaengdi', art: 'f_bagels', name: '앞뱅디식당', kr: '앞뱅디식당', days: [4], meal: '早餐', area: '濟州市區（距機場約 3.4 km）', q: '앞뱅디식당 제주',
+      addr: '待確認', hours: '07:00–21:00（週一 09:00 起、週日到 14:00）', closed: '無固定公休', price: '待確認', dishes: '待確認',
+      near: '距機場約 3.4 km；11/24 週二 07:00 開門', note: '營業時間來自 jeju.com（2026/11/10），菜單待確認。', status: 'check',
+      src: [{ t: 'jeju.com 機場周邊美食', u: 'https://www.jeju.com/blog/restaurants-jeju-airport-haejangguk' }] },
+    { id: 'samdae', art: 'f_noodle', name: '三代麵條會館 本店', kr: '삼대국수회관 본점', days: [2], meal: '午餐', area: '濟州市區（距機場約 4.5 km）', q: '삼대국수회관 본점 제주',
+      addr: '待確認', hours: '08:30–翌日 01:30', closed: '無固定公休', price: '待確認', dishes: '豬肉麵、麵類',
+      near: '若韓服店在濟州市區，可在出發往山君不離前先吃', note: '營業時間來自 jeju.com（2026/11/10）。', status: 'check',
+      src: [{ t: 'jeju.com 機場周邊美食', u: 'https://www.jeju.com/blog/restaurants-jeju-airport-haejangguk' }] },
+    { id: 'sukseongdo', tag: 'you', art: 'f_meat', name: '熟成道 老衡本館', kr: '숙성도 노형본관', days: [1, 2, 3], meal: '晚餐', area: '濟州市 老衡洞（老衡五岔路一帶）', q: '숙성도 노형본관',
+      addr: '待確認（老衡五岔路附近）', hours: '待確認', closed: '待確認', price: '待確認', dishes: '肋眼（뼈등심）、720 熟成五花肉（交叉熟成黑豬）',
+      near: '老衡洞，距 Hotel Leo 車程短（距離待確認）', note: 'Visit Jeju 推薦趨勢整理的人氣店（Brunch 專欄）；熱門，建議用 Catch Table 預先排隊／預約。', status: 'check',
+      src: [{ t: 'Brunch：신제주・노형동 맛집 지도', u: 'https://brunch.co.kr/@easystep/63' }] },
+    { id: 'dohuhaenyeo', art: 'f_bibim', name: '道頭海女之家', kr: '도두해녀의집', days: [1, 3], meal: '晚餐／午餐', area: '濟州市 道頭洞（近機場）', q: '도두해녀의집',
+      addr: '待確認（道頭洞）', hours: '待確認', closed: '待確認', price: '待確認', dishes: '特物回（특물회，含鮑魚海螺）、鮑魚粥、烤鯖魚',
+      near: '機場附近，適合 Day 1、Day 3 返回市區後', note: '食神整理的機場動線推薦；營業時間待確認，海女之家通常傍晚較早收。', status: 'check',
+      src: [{ t: '식신：제주도 맛집 동선별 TOP 6', u: 'https://www.siksinhot.com/theme/magazine/19014' }] },
+    { id: 'jinmi', art: 'f_bibim', name: '眞味食堂', kr: '진미식당', days: [2, 3], meal: '早餐／晚餐', area: '城山日出峰周邊', q: '진미식당 성산',
+      addr: '待確認（城山日出峰附近）', hours: '早上 07:00 起，約 20:00 結束（食神資料）', closed: '待確認', price: '待確認', dishes: '燉刺鰽魚（갈치조림）、烤玉筋魚/玉頭魚（옥돔구이）',
+      near: '日出峰停車場步行約 3–5 分；店前有停車場', note: '食神評分 3.6（6 則評論，樣本少）；可吃早餐的海鮮店。', status: 'check',
+      src: [{ t: '식신：진미식당', u: 'https://www.siksinhot.com/P/367844' }] },
+    { id: 'buddumak', art: 'f_sand', name: '灶台食堂（部屋幕食堂）', kr: '부뚜막식당', days: [2, 3], meal: '早餐／晚餐', area: '城山 古城里', q: '부뚜막식당 성산', phone: '064-782-8941',
+      addr: '제주 서귀포시 성산읍 고성오조로 11', hours: '08:00–20:00（早上請先電話確認）', closed: '全年無休', price: '待確認', dishes: '燉刺鰽魚（附整條烤刺鰽魚）、海膽海帶湯、烤玉筋魚、鮑魚冷湯',
+      near: '城山日出峰、牛島、涉地可支附近', note: '小型老店，可依人數點餐（韓國觀光公社資料）。', status: 'ok',
+      src: [{ t: 'ktriptips（韓國觀光公社）', u: 'https://www.ktriptips.com/kor/food/2833201' }] },
+    { id: 'cocomama', art: 'f_meat', name: 'CoCoMama 城山店（龍蝦）', kr: '코코마마 성산점', days: [2], meal: '晚餐', area: '城山日出峰前', q: '코코마마 성산점',
+      addr: '제주 서귀포시 성산읍 일출로 258-11', hours: '10:30–20:30（休息 15:30–17:00，最後點餐 19:30）', closed: '每週四公休', price: '套餐約 ₩38,000–72,000、單點約 ₩1,000–34,500（mom-mom 資料）', dishes: '龍蝦套餐',
+      near: '日出峰前，滿車時可停日出峰右側免費停車場，步行約 1–2 分', note: '11/22 週日營業；休息時間 15:30–17:00，請避開。', status: 'ok',
+      src: [{ t: 'mom-mom 資訊', u: 'https://mom-mom.net/travel/places/6670f6616e307aad9d173d9c' }] },
+    { id: 'tongbal', art: 'f_table', name: '筒發 城山（熟成生魚片）', kr: '통발 성산점', days: [2], meal: '晚餐', area: '城山日出峰附近', q: '통발 성산점',
+      addr: '待確認（城山日出峰附近）', hours: '暫時 14:00–21:00（食神資料，待確認）', closed: '待確認', price: '待確認', dishes: '活鯖魚生魚片、딱새우회（毛蝦刺身）、海鮮泡麵、一籃份拼盤',
+      near: '2 樓吧台可同時看日出峰與海；可停日出峰免費停車場、可用 Naver 預約', note: '個人經營的小酒館型餐廳，營業時間常調整，務必先確認。', status: 'check',
+      src: [{ t: '식신：통발', u: 'https://www.siksinhot.com/P/1374590' }] },
+    { id: 'seongsansusan', art: 'f_bibim', name: '城山水產食堂', kr: '성산수산식당', days: [2], meal: '晚餐', area: '城山', q: '성산수산식당 성산중앙로 29',
+      addr: '제주 서귀포시 성산읍 성산중앙로 29 1층', hours: '待確認', closed: '待確認', price: '待確認', dishes: '鯖魚生魚片菜包飯、石斑魚清湯（우럭지리）',
+      near: '城山日出峰附近', note: '網友評價內裝乾淨、海鮮新鮮（polle 評論，單一則）。', status: 'check',
+      src: [{ t: 'polle 評論', u: 'https://polle.com/yooni816/posts/47' }] },
+    { id: 'jieun', art: 'f_takeout', name: '智恩家餐桌', kr: '지은이네밥상', days: [3], meal: '早餐', area: '城山日出峰附近', q: '지은이네밥상 성산',
+      addr: '待確認', hours: '早上很早開門（確切時間待確認）', closed: '週日公休（11/23 週一營業）', price: '待確認', dishes: '拌飯、貝螺海帶湯（보말미역국）、泡菜鍋',
+      near: '城山日出峰附近，適合搭船前吃早餐', note: '評價以「在地、划算」為主（Diningcode）；有人覺得口味普通。', status: 'check',
+      src: [{ t: 'Diningcode', u: 'https://www.diningcode.com/dingco/82LapPOQJJfx' }] },
+  ],
+
+  /* ---------- 旅行清單預設內容 ---------- */
+  checklist: [
+    { id: 'g1', name: '護照及重要文件', items: ['護照（效期足夠）', '入境相關規定確認（例如 K-ETA 是否需要，請查韓國官方）', '身分證／健保卡', '旅遊保險資料', '緊急聯絡人與飯店電話截圖'] },
+    { id: 'g2', name: '機票及租車文件', items: ['LJ942（11/21 02:45）電子機票', 'IT655（11/24 11:00）電子機票', '租車預約確認單（Jeju Autohouse，預約編號 2622774402）', '台灣駕照＋國際駕照（IDP，租車與租電動摩托車都要看；請確認是否含機車類別）', '信用卡（租車押金用）', '牛島：電動摩托車用——國際駕照（IDP）＋台灣駕照＋護照', '安全帽／防風手套（牛島騎車）', 'Klook 韓服體驗憑證'] },
+    { id: 'g3', name: '保暖衣物', items: ['防風保暖外套', '發熱衣／內搭', '毛衣或刷毛上衣', '厚襪子', '暖暖包'] },
+    { id: 'g4', name: '防滑鞋', items: ['防滑好走的鞋（沿海與草原風大路滑）', '備用鞋或拖鞋（飯店用）'] },
+    { id: 'g5', name: '手套、圍巾、帽子', items: ['手套（可觸控）', '圍巾', '毛帽（耳朵保暖）', '口罩'] },
+    { id: 'g6', name: '相機及充電設備', items: ['相機＋記憶卡', '手機充電線', '行動電源', '韓國插座轉接頭（二孔圓形 220V）', '車用手機架／車充'] },
+    { id: 'g7', name: '盥洗用品', items: ['牙刷牙膏', '洗面乳與保養品', '常備藥品', '護手霜／護唇膏', '衛生用品'] },
+    { id: 'g8', name: '自駕用品', items: ['手機網路（eSIM／SIM／分享器）', 'NAVER Map、Kakao Map App 先下載', '下載離線地圖', '零錢／交通卡（T-money）', '太陽眼鏡（冬季低角度陽光刺眼）'] },
+    { id: 'g9', name: '出發前確認事項', items: ['確認 Klook 韓服 10:00 預約、店家地點與彩妝加購時間', '確認 Hugely Jeju 場次與是否需預約（約 11:00 開門）', '確認熔岩咖啡店 FLOWAVE 表演時間、營業時間（15:00–22:00，第三方資料）與是否需預約', '確認 Snoopy Garden 當天營業與時間', '確認 Autohouse 機場接駁方式、能否提早取車（06:05 抵達／08:00 取車）', '確認牛島船班（冬季末班約 17:00）與天氣、停航公告', '確認牛島租電動摩托車的駕照／保險規定', '確認 11/24 還車＋機場的緩衝時間'] },
+  ],
+
+  /* ---------- 預算分類與成員（成員可在網站內直接修改） ---------- */
+  budgetCats: ['機票', '租車', '住宿', 'ETC／高速公路費', '油錢', '餐飲', '購物', '景點門票', '其他'],
+  members: ['旅伴 A', '旅伴 B', '旅伴 C', '旅伴 D'],
+  krwPerTwd: 40.69,   // 匯率：1 元台幣 ＝ 幾韓元（你提供：台幣:韓元 = 1:40.69），可在網站內改
+
+  /* ---------- 天氣地點（座標只用來查天氣） ---------- */
+  /* ---------- 牛島船班（來源：chengshan.kr/zh-hant/udo，2026/11/17 讀取；實際班次務必當天／前一天確認） ---------- */
+  udo: {
+    srcUrl: 'https://chengshan.kr/zh-hant/udo',
+    warn: '下面時間來自第三方網站 chengshan.kr（頁面沒有寫冬季／夏季差異）。船班會因潮汐與天氣調整、停航，請在出發前一天與 11/23 當天早上，打電話給城山港售票處或看該網站的運航狀態，再決定行程與回程船。',
+    tables: [
+      { t: '城山港 → 牛島', n: '每 30 分一班；首班 07:30、末班 17:00', times: ['07:30','08:00','08:30','09:00','09:30','10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00'] },
+      { t: '下牛目洞港 → 城山港', n: '約每小時一班；首班 07:30、末班 17:00', times: ['07:30','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00'] },
+      { t: '天津港 → 城山港', n: '約每小時一班；首班 07:30、末班 17:00', times: ['07:30','08:30','09:30','10:30','11:30','12:30','13:30','14:30','15:30','16:30','17:00'] },
+      { t: '終達港 → 下牛目洞港', n: '島間接駁', times: ['09:30','11:30','13:30','15:30'] },
+      { t: '下牛目洞港 → 終達港', n: '島間接駁', times: ['10:30','12:30','14:30','16:00'] },
+    ],
+    fares: [['成人', '進島 ₩11,000／出島 ₩5,000（頁面另有 ₩6,000 欄位，排版不清）'], ['國高中生', '進島 ₩10,800／出島 ₩5,000'], ['長者、身障、有功者', '進島 ₩10,000／出島 ₩5,000'], ['小學生', '進島 ₩3,800／出島 ₩1,650'], ['2–7 歲', '進島 ₩3,300／出島 ₩1,650']],
+    fareNote: '頁面的「乘客」與「車輛」欄位對應不清楚，價格請以售票處公告為準。',
+    how: ['只能現場購票，不接受網路預訂。', '帶身分證件；外國旅客帶護照。', '乘船申報單要填 2 張（去程 1 張、回程 1 張）。', '回程建議搭 16:00 以前的船，不要壓末班 17:00。'],
+    tel: ['城山港售票處：064-782-5671', '翻譯服務：1330', '緊急：119'],
+    scooter: ['你們計畫在島上租電動摩托車：請帶國際駕照（IDP）＋台灣駕照＋護照。', '駕照是否含「機車」類別、可租車型與保險（有租車行不替駕駛投保），請向租車行確認——待確認。', '租車行與牛島巴士等交通資訊，來源頁面沒有提供。'],
+    food: ['UDO POYOYO CAFE：甜點咖啡，有花生冰淇淋，營業至 20:00（頁面資料）。', '朴哥的店貝貝篝火（城山浦）：烤貝類與海鮮（頁面資料，營業時間待確認）。', '另有「海豚快艇」可免費接送（快艇票 ₩30,000 自付，約 30 分，服務 08:00–16:30，需另外申請接送）。'],
+  },
+  weatherPlaces: [
+    { id: 'jeju', name: '濟州市（Hotel Leo）', lat: 33.4996, lon: 126.5312, nq: '제주시 날씨' },
+    { id: 'seongsan', name: '城山（Co-op City）', lat: 33.4584, lon: 126.9425, nq: '성산읍 날씨' },
+    { id: 'udo', name: '牛島', lat: 33.5, lon: 126.95, nq: '우도 날씨' },
+    { id: 'west', name: '西岸（涯月・翰林一帶）', lat: 33.4625, lon: 126.3105, nq: '애월읍 날씨' },
+  ],
+  climate: [
+    '平均高溫約 14–17°C、低溫約 9–13°C（11 月下旬偏冷，早晚更冷、風大體感更低）。',
+    '平均風速約 20–24 km/h，陣風可到約 40 km/h 以上；海邊、草原、牛島會更冷。',
+    '11 月降雨量約 80–100 mm，雨日數各資料差異大（約 7–20 天）：雨具與防滑鞋要帶。',
+    '日落約 17:30 前後（請以當日查詢為準），傍晚天色暗得快。',
+  ],
+  climateSrc: [
+    { t: 'GoTripzi', u: 'https://www.gotripzi.com/destinations/jeju-island-kr/weather/november' },
+    { t: 'EaseWeather', u: 'https://www.easeweather.com/asia/south-korea/jeju-do/november' },
+  ],
+  weatherLinks: [
+    { t: '韓國氣象廳 濟州地方氣象廳（KMA）', u: 'https://www.kma.go.kr/jeju/html/oneclick/', d: '官方預報（濟州）' },
+    { t: '韓國氣象廳（KMA）', u: 'https://www.weather.go.kr/w/index.do', d: '官方預報與特報（警報）' },
+    { t: 'Windy 風與浪', u: 'https://www.windy.com/33.499/126.531?33.499,126.531,9', d: '風速、陣風、波浪（牛島船班參考）' },
+    { t: 'NAVER 濟州天氣', u: 'https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%EC%8B%9C+%EB%82%A0%EC%94%A8', d: '韓文在地天氣' },
+    { t: 'Google 濟州天氣', u: 'https://www.google.com/search?q=%E6%BF%9F%E5%B7%9E+%E5%A4%A9%E6%B0%A3', d: '快速查看' },
+  ],
+  usefulLinks: [
+    { t: 'chengshan.kr 牛島頁（運航狀態）', u: 'https://chengshan.kr/zh-hant/udo', d: '船班狀態與時刻表（第三方，仍請電話確認）' },
+    { t: '牛島船公司（Udo Ship）', u: 'https://www.udoship.com', d: '冬季船班與停航公告（網址以官方為準）' },
+  ],
+};
+
+</script>
+<script>
+/* ===== 素材區（圖片資料，請勿修改）===== */
+const ART = {"sea": "sea.jpg", "air": "air.jpg", "road": "road.jpg", "grass": "grass.jpg", "hanbok": "hanbok.jpg", "island": "island.jpg", "stone": "stone.jpg", "ic_plane": "ic_plane.jpg", "ic_car": "ic_car.jpg", "ic_bagel": "ic_bagel.jpg", "ic_camera": "ic_camera.jpg", "ic_gift": "ic_gift.jpg", "ic_music": "ic_music.svg", "ic_cafe": "ic_cafe.jpg", "ic_fork": "ic_fork.jpg", "ic_ship": "ic_ship.jpg", "ic_bed": "ic_bed.jpg", "leo": "leo.jpg", "coop": "coop.jpg", "snoopy": "snoopy.jpg", "hero": "hero.jpg", "f_bibim": "f_bibim.jpg", "f_cake": "f_cake.jpg", "f_takeout": "f_takeout.jpg", "f_bagels": "f_bagels.jpg", "f_meat": "f_meat.jpg", "f_sand": "f_sand.jpg", "f_noodle": "f_noodle.jpg", "f_latte": "f_latte.jpg", "f_orange": "f_orange.jpg", "f_table": "f_table.jpg"};
+</script>
+<script>
+/* ============================================================
+   程式區（一般不需要修改）
+   ============================================================ */
+'use strict';
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const enc = encodeURIComponent;
+const uid = () => Math.random().toString(36).slice(2, 9) + Date.now().toString(36).slice(-4);
+const fmt = n => Math.round(n).toLocaleString('en-US');
+
+/* ---------- 儲存（localStorage，失敗時退回記憶體） ---------- */
+const MEM = {};
+const LS = {
+  get(k, d) { try { const v = localStorage.getItem('jeju26:' + k); if (v !== null) return JSON.parse(v); } catch (e) {} return (k in MEM) ? MEM[k] : d; },
+  set(k, v) { MEM[k] = v; try { localStorage.setItem('jeju26:' + k, JSON.stringify(v)); } catch (e) {} },
+};
+
+/* ---------- 照片儲存（IndexedDB，失敗時退回記憶體） ---------- */
+const DB = (() => {
+  const mem = { photos: new Map(), assets: new Map() };
+  let dbp = null, broken = false;
+  const open = () => dbp || (dbp = new Promise((res, rej) => {
+    try {
+      const r = indexedDB.open('jeju26', 1);
+      r.onupgradeneeded = () => { const d = r.result; d.createObjectStore('photos', { keyPath: 'id' }); d.createObjectStore('assets', { keyPath: 'key' }); };
+      r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+    } catch (e) { rej(e); }
+  }));
+  const keyOf = s => s === 'photos' ? 'id' : 'key';
+  async function run(store, mode, fn) {
+    if (!broken) {
+      try {
+        const d = await open();
+        return await new Promise((res, rej) => { const t = d.transaction(store, mode); const rq = fn(t.objectStore(store)); t.oncomplete = () => res(rq ? rq.result : undefined); t.onerror = () => rej(t.error); t.onabort = () => rej(t.error); });
+      } catch (e) { broken = true; }
+    }
+    return undefined;
+  }
+  return {
+    get broken() { return broken; },
+    async put(store, obj) { const r = await run(store, 'readwrite', s => s.put(obj)); if (broken) mem[store].set(obj[keyOf(store)], obj); return r; },
+    async get(store, k) { const r = await run(store, 'readonly', s => s.get(k)); return broken ? mem[store].get(k) : r; },
+    async del(store, k) { await run(store, 'readwrite', s => s.delete(k)); if (broken) mem[store].delete(k); },
+    async all(store) { const r = await run(store, 'readonly', s => s.getAll()); return broken ? [...mem[store].values()] : (r || []); },
+  };
+})();
+
+function resizeImage(file, max = 1600, q = 0.82) {
+  return new Promise((res, rej) => {
+    const url = URL.createObjectURL(file); const img = new Image();
+    img.onload = () => {
+      let w = img.naturalWidth, h = img.naturalHeight; const s = Math.min(1, max / Math.max(w, h));
+      w = Math.round(w * s); h = Math.round(h * s);
+      const c = document.createElement('canvas'); c.width = w; c.height = h; c.getContext('2d').drawImage(img, 0, 0, w, h);
+      c.toBlob(b => { URL.revokeObjectURL(url); b ? res(b) : rej(new Error('blob')); }, 'image/jpeg', q);
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); rej(new Error('img')); };
+    img.src = url;
+  });
+}
+function pickFile(multiple, cb) {
+  const i = document.createElement('input'); i.type = 'file'; i.accept = 'image/*'; i.multiple = !!multiple;
+  i.onchange = () => cb([...i.files]); i.click();
+}
+function toast(msg) { const t = document.createElement('div'); t.className = 'toast'; t.textContent = msg; document.body.appendChild(t); setTimeout(() => t.remove(), 2400); }
+async function copyText(txt) {
+  try { await navigator.clipboard.writeText(txt); toast('已複製'); } catch (e) { toast('此環境無法自動複製，請長按文字手動複製'); }
+}
+
+/* ---------- 地圖連結 ---------- */
+const gmap = q => `https://www.google.com/maps/search/?api=1&query=${enc(q)}`;
+const nmap = q => `https://map.naver.com/p/search/${enc(q)}`;
+const gdir = (o, d, w) => `https://www.google.com/maps/dir/?api=1&origin=${enc(o)}&destination=${enc(d)}&travelmode=driving` + (w && w.length ? `&waypoints=${enc(w.join('|'))}` : '');
+
+/* ---------- 狀態 ---------- */
+const S = {
+  view: 'home', day: LS.get('lastDay', 1), foodFilter: 0, photoFilter: 'all', fx: null,
+  flagsDone: LS.get('flagsDone', {}), notes: LS.get('notes', {}), custom: LS.get('custom', {}),
+  budget: LS.get('budget2', null), checklist: LS.get('checklist', null), mapOpen: false,
+  photos: [], urls: {}, assetUrls: {}, mapSel: {}, weather: {},
+};
+if (!S.budget) { const old = LS.get('budget', null); S.budget = old ? { ...old, krw: TRIP.krwPerTwd } : { krw: TRIP.krwPerTwd, members: [...TRIP.members], budgets: {}, expenses: [], cur: 'KRW' }; delete S.budget.rate; LS.set('budget2', S.budget); }
+const defaultChecklist = () => TRIP.checklist.map(g => ({ id: g.id, name: g.name, items: g.items.map(t => ({ id: uid(), text: t, done: false })) }));
+if (!S.checklist) S.checklist = defaultChecklist();
+if (!LS.get('ckmig1', false)) { const g2 = S.checklist.find(g => g.id === 'g2'); if (g2 && !g2.items.some(i => /電動摩托車/.test(i.text))) g2.items.push({ id: uid(), text: '牛島：電動摩托車用——國際駕照（IDP）＋台灣駕照＋護照', done: false }); LS.set('ckmig1', true); LS.set('checklist', S.checklist); }
+if (!LS.get('ckmig2', false)) { let ch = false; S.checklist.forEach(g => g.items.forEach(it => { if (/^租車預約確認單（待確認是否已訂）$/.test(it.text)) { it.text = '租車預約確認單（Jeju Autohouse，預約編號 2622774402）'; ch = true; } else if (it.text === '確認 YYMMDD 營業時間') { it.text = 'YYMMDD 營業時間：每天 14:00–22:00（已確認）'; ch = true; } else if (it.text === '確認落火咖啡廳店名、地址與營業時間') { it.text = '確認熔岩咖啡店 FLOWAVE 表演時間、營業時間（15:00–22:00，第三方資料）與是否需預約'; ch = true; } else if (it.text === '確認租車取還車地點、營業時間、保險、機場接駁') { it.text = '確認 Autohouse 機場接駁方式、能否提早取車（06:05 抵達／08:00 取車）'; ch = true; } })); LS.set('ckmig2', true); if (ch) LS.set('checklist', S.checklist); }
+const saveBudget = () => LS.set('budget2', S.budget);
+const saveCheck = () => LS.set('checklist', S.checklist);
+
+const ART_KEYS = { road: 'road', hanbok: 'hanbok', sea: 'sea', air: 'air', grass: 'grass' };
+const artUrl = k => (typeof ART !== 'undefined' && ART[k]) || '';
+const dayArt = d => `--bg:url(${artUrl(d.art)})`;
+const TYPE = { flight: ['✈', '機場／航班'], sight: ['📍', '景點'], meal: ['🍜', '餐廳'], hotel: ['🛏', '住宿'], transport: ['🚗', '交通'], shop: ['🛍', '購物'] };
+const hotelById = id => TRIP.hotels.find(h => h.id === id);
+const foodById = id => TRIP.restaurants.find(r => r.id === id);
+const flagById = id => TRIP.flags.find(f => f.id === id);
+
+/* ---------- 路由 ---------- */
+const VIEWS = ['home', 'itinerary', 'udo', 'food', 'budget', 'photos', 'checklist', 'weather'];
+const NAVS = [['home', '首頁'], ['itinerary', '每日行程'], ['udo', '牛島船班'], ['food', '餐廳'], ['budget', '預算'], ['photos', '相簿'], ['checklist', '清單'], ['weather', '天氣']];
+function parseHash() {
+  const h = location.hash.replace('#', '');
+  const m = h.match(/^day([1-4])$/);
+  if (m) return { view: 'itinerary', day: +m[1] };
+  if (VIEWS.includes(h)) return { view: h };
+  return { view: 'home' };
+}
+function go(h) { if (location.hash === '#' + h) route(); else location.hash = h; }
+async function route(keep) {
+  const r = parseHash(); S.view = r.view; if (r.day) { S.day = r.day; LS.set('lastDay', r.day); }
+  renderNav();
+  const el = $('#view');
+  el.innerHTML = '';
+  ({ home: vHome, itinerary: vDay, food: vFood, budget: vBudget, photos: vPhotos, checklist: vCheck, weather: vWeather, udo: vUdo }[S.view])(el);
+  if (!keep) window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', () => route());
+function renderNav() {
+  $('#tabs').innerHTML = NAVS.map(([k, t]) => `<button class="tab ${S.view === k ? 'on' : ''}" data-go="${k === 'itinerary' ? 'day' + S.day : k}">${t}</button>`).join('');
+  const on = $('#tabs .on'); if (on) on.scrollIntoView({ inline: 'center', block: 'nearest' });
+}
+
+/* ---------- 共用元件 ---------- */
+const secH = (zh, en) => `<div class="sec-h"><h2>${zh}</h2><span class="en">${en || ''}</span><span class="line"></span></div>`;
+function flagList(ids, title) {
+  const fl = ids.map(flagById).filter(Boolean); if (!fl.length) return '';
+  return `<div class="flagbox"><h4>⚠ ${title || '需要你確認'}（${fl.length}）</h4>${fl.map(f => flagRow(f)).join('')}</div>`;
+}
+function flagRow(f) {
+  const d = !!S.flagsDone[f.id];
+  return `<label class="flag ${d ? 'done' : ''}"><input type="checkbox" data-flag="${f.id}" ${d ? 'checked' : ''}><span><span class="chip clay">${esc(f.level)}</span> ${esc(f.text)}<small>${esc(f.detail)}</small></span></label>`;
+}
+function placeName(stop) { const c = S.custom[stop.id]; return c && c.name ? c.name : (stop.q || ''); }
+function stopQuery(stop) { const c = S.custom[stop.id]; if (c && c.name) return c.name; return stop.q || ''; }
+async function ensureAsset(key) {
+  if (S.assetUrls[key] !== undefined) return S.assetUrls[key];
+  const a = await DB.get('assets', key);
+  S.assetUrls[key] = a && a.blob ? URL.createObjectURL(a.blob) : '';
+  return S.assetUrls[key];
+}
+function slotHTML(key, artKey, icon, cap) {
+  return `<div class="ph-slot ${/^ic_/.test(artKey || '') ? 'icon' : ''}" data-slot="${esc(key)}" ${artKey ? `style="--bg:url(${artUrl(artKey)})"` : ''}>${artKey ? `<img src="${artUrl(artKey)}" alt="" data-fallback>` : `<span class="ic">${icon || '📷'}</span>`}${cap ? `<span class="cap">${esc(cap)}</span>` : ''}<button class="up" data-slotup="${esc(key)}">📷 換成我的照片</button></div>`;
+}
+async function hydrateSlots(root) {
+  for (const s of $$('[data-slot]', root)) {
+    const url = await ensureAsset('slot:' + s.dataset.slot);
+    if (url) { let im = $('img[data-user]', s); if (!im) { im = document.createElement('img'); im.dataset.user = '1'; s.prepend(im); } im.src = url; const f = $('img[data-fallback]', s); if (f) f.style.display = 'none'; }
+  }
+}
+
+/* ============================================================
+   首頁
+   ============================================================ */
+function vHome(el) {
+  const allFlags = TRIP.flags;
+  const open = allFlags.filter(f => !S.flagsDone[f.id]).length;
+  el.innerHTML = `
+  <div class="wrap">
+    <section class="hero" id="hero">
+      <div class="bg" id="heroBg"></div>
+      <svg class="art" viewBox="0 0 1000 520" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe9ec"/><stop offset=".65" stop-color="#f7efdf"/></linearGradient>
+          <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9d0d9"/><stop offset="1" stop-color="#cfe0e5"/></linearGradient>
+        </defs>
+        <rect width="1000" height="520" fill="url(#sk)"/>
+        <circle cx="770" cy="150" r="58" fill="#f6dcb8" opacity=".75"/>
+        <g opacity=".8" fill="#fffaf0"><ellipse cx="200" cy="120" rx="90" ry="16"/><ellipse cx="250" cy="106" rx="60" ry="14"/><ellipse cx="610" cy="80" rx="80" ry="13"/></g>
+        <path d="M0 330 Q130 300 250 322 T520 306 T760 326 T1000 304 V520 H0Z" fill="#bcc9a6" opacity=".55"/>
+        <path d="M260 340 Q400 210 500 205 Q600 210 740 340Z" fill="#a9b89a" opacity=".9"/>
+        <path d="M440 232 Q500 190 560 232 Q500 224 440 232Z" fill="#f5efe2"/>
+        <path d="M0 360 Q120 345 240 360 T500 360 T760 360 T1000 355 V520 H0Z" fill="url(#sea)"/>
+        <g fill="none" stroke="#fffaf0" stroke-width="2" opacity=".7"><path d="M40 400 q30 -10 60 0 t60 0"/><path d="M300 430 q30 -10 60 0 t60 0"/><path d="M620 410 q30 -10 60 0 t60 0"/><path d="M820 450 q30 -10 60 0 t60 0"/></g>
+      </svg>
+      <button class="btn sm hero-btn" data-herophoto>🖼 更換主視覺照片</button>
+      <div class="stamp">JEJU<br>2026<br>AUTUMN</div>
+      <div class="hero-in">
+        <div class="eyebrow">Jeju Island · Road Trip Journal</div>
+        <h1>${esc(TRIP.groupName)}</h1>
+        <div class="date">${esc(TRIP.dateLabel)}</div>
+        <p class="sub">${esc(TRIP.tripTitle)}・${TRIP.people} 人同行</p>
+        <div class="pills"><span class="pill">✈ 台北 ⇄ 濟州</span><span class="pill">🛏 濟州市 · 城山</span><span class="pill">🚗 自駕</span></div>
+      </div>
+    </section>
+
+    <div class="facts">${TRIP.facts.map(f => `<div class="fact"><b>${esc(f.v)}</b><span>${esc(f.l)}</span></div>`).join('')}</div>
+
+    <section class="sec">${secH('旅行簡介', 'About the trip')}
+      <div class="grid g2" style="align-items:stretch">
+        <div class="card"><p style="margin:0">${esc(TRIP.intro)}</p>
+          <p class="small mute" style="margin:12px 0 0">${esc(TRIP.verified)}</p></div>
+        <div class="card soft" style="display:flex;gap:14px;align-items:center"><img src="${artUrl('island')}" alt="濟州島行程路線示意" style="width:48%;border-radius:14px;border:1px solid var(--line)"><div class="small"><b>路線示意</b><br>濟州市區 → 西岸 → 山君不離 → 城山 → 牛島。<br><span class="mute">取自你的行程簡報圖</span></div></div>
+      </div>
+    </section>
+
+    <section class="sec" id="quick">${secH('四天行程快速導覽', 'Quick guide')}
+      <div class="grid g4">${TRIP.days.map(d => `
+        <button class="card daycard" data-go="day${d.n}" aria-label="前往 Day ${d.n}">
+          <div class="art" style="${dayArt(d)}"></div>
+          <div class="body"><div class="dn">DAY ${d.n}</div><div class="dd">${d.date}（${d.weekday}）</div><h3>${esc(d.title)}</h3>
+          <ul>${d.stops.filter(s => s.type !== 'hotel').slice(0, 3).map(s => `<li>${esc(s.name.replace(/（.*?）/g, ''))}</li>`).join('')}</ul></div>
+        </button>`).join('')}
+      </div>
+    </section>
+
+    <section class="sec">${secH('航班資訊', 'Flights')}
+      <div class="grid g2">${TRIP.flights.map(f => `
+        <div class="card flight"><div class="fl-row"><span class="chip ${f.dir === '去程' ? 'blue' : ''}">${f.dir}</span><b>${esc(f.no)}</b><span class="small mute">${esc(f.date)}</span></div>
+          <div class="fl-row"><div><div class="fl-t">${f.dep}</div><div class="fl-p">${esc(f.depPort)}</div></div><div class="fl-mid"><span>✈ ${esc(f.dur)}</span></div><div class="tr" style="text-align:right"><div class="fl-t">${f.arr}</div><div class="fl-p">${esc(f.arrPort)}</div></div></div></div>`).join('')}
+      </div></section>
+
+    <section class="sec">${secH('住宿資訊', 'Stay')}
+      <div class="grid g3">${TRIP.hotels.map(h => `
+        <div class="card hotel"><img class="ph" src="${artUrl(h.photo)}" alt="${esc(h.name)}"><div>
+          <span class="chip">${esc(h.nights)}</span><h3 style="margin-top:6px">${esc(h.name)}</h3><div class="small mute">${esc(h.city)}</div>
+          <div class="small" style="margin-top:6px">入住 ${esc(h.checkIn)}<br>退房 ${esc(h.checkOut)}</div>
+          <div class="acts" style="margin-top:8px"><a class="btn sm" target="_blank" rel="noopener" href="${gmap(h.q)}">Google</a><a class="btn sm" target="_blank" rel="noopener" href="${nmap(h.q)}">NAVER</a></div></div></div>`).join('')}
+      </div></section>
+
+    <section class="sec" id="flags">${secH('待確認事項', 'To confirm')}
+      <div class="card"><p class="small mute" style="margin:0 0 8px">我不擅自決定：以下是行程資料中矛盾、不足或需要你拍板的地方，確認後可勾選（目前還有 <b>${open}</b> 項未確認）。</p>
+        ${allFlags.map(f => `<div style="border-top:1px dashed var(--line)">${flagRow(f)}</div>`).join('')}</div>
+    </section>
+  </div>`;
+  applyHeroPhoto();
+}
+async function applyHeroPhoto() {
+  const url = (await ensureAsset('hero')) || artUrl('hero'); const hero = $('#hero'); if (!hero) return;
+  if (url) { $('#heroBg').style.backgroundImage = `url(${url})`; hero.classList.add('photo'); $('svg.art', hero).style.display = 'none'; }
+}
+
+/* ============================================================
+   每日行程
+   ============================================================ */
+
+/* ---------- 插畫地圖（濟州島輪廓＋大概位置，位置為示意） ---------- */
+const JEJU_OUTLINE = [[33.30, 126.165], [33.36, 126.19], [33.41, 126.26], [33.47, 126.31], [33.50, 126.40], [33.52, 126.50], [33.53, 126.60], [33.55, 126.67], [33.565, 126.76], [33.545, 126.86], [33.51, 126.92], [33.46, 126.945], [33.42, 126.925], [33.32, 126.83], [33.27, 126.72], [33.26, 126.64], [33.24, 126.56], [33.23, 126.41], [33.22, 126.31], [33.20, 126.25], [33.21, 126.20]];
+const mapXY = ([la, lo]) => [(lo - 126.12) * 930 + 10, (33.60 - la) * 1100 + 10];
+const TYPE_EMO = { flight: '✈️', sight: '📸', meal: '🍴', hotel: '🛏️', transport: '🚗', shop: '🎁' };
+const TYPE_COL = { flight: '#3FA9E6', sight: '#3DBB7E', meal: '#FF9340', hotel: '#FF6F9C', transport: '#7C8BA8', shop: '#A688EC' };
+let _jmapBase = '';
+function jejuBase() {
+  if (_jmapBase) return _jmapBase;
+  const P = JEJU_OUTLINE.map(mapXY), n = P.length;
+  let d = 'M' + P[0].map(v => v.toFixed(1)).join(' ');
+  for (let i = 0; i < n; i++) {
+    const p0 = P[(i - 1 + n) % n], p1 = P[i], p2 = P[(i + 1) % n], p3 = P[(i + 2) % n];
+    const c1 = [p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6], c2 = [p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6];
+    d += ` C${c1[0].toFixed(1)} ${c1[1].toFixed(1)} ${c2[0].toFixed(1)} ${c2[1].toFixed(1)} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`;
+  }
+  d += 'Z';
+  const inside = (x, y) => { let c = false; for (let i = 0, j = n - 1; i < n; j = i++) { const [xi, yi] = P[i], [xj, yj] = P[j]; if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) c = !c; } return c; };
+  let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const [hx, hy] = mapXY([33.3617, 126.5292]);
+  const xs = P.map(p => p[0]), ys = P.map(p => p[1]);
+  const trees = [];
+  for (let t = 0; t < 900 && trees.length < 26; t++) {
+    const x = Math.min(...xs) + rnd() * (Math.max(...xs) - Math.min(...xs)), y = Math.min(...ys) + rnd() * (Math.max(...ys) - Math.min(...ys));
+    if (!inside(x, y) || !inside(x + 14, y) || !inside(x - 14, y) || !inside(x, y + 14) || !inside(x, y - 14)) continue;
+    if (Math.hypot(x - hx, y - hy) < 78) continue;
+    if (trees.some(q => Math.hypot(q[0] - x, q[1] - y) < 44)) continue;
+    trees.push([x, y]);
+  }
+  const tree = ([x, y]) => `<g transform="translate(${x.toFixed(0)} ${y.toFixed(0)})"><rect x="-1.5" y="0" width="3" height="7" fill="#9A6B43"/><circle cx="0" cy="-2" r="9" fill="#5FBF6E" stroke="#3F9A55" stroke-width="2"/><circle cx="-3" cy="-3" r="2.6" fill="#FF9F2E"/><circle cx="3" cy="0" r="2.6" fill="#FF9F2E"/><circle cx="1" cy="-6" r="2.2" fill="#FF9F2E"/></g>`;
+  const oreum = [[33.43, 126.70], [33.40, 126.36], [33.385, 126.64], [33.45, 126.42], [33.33, 126.74]].map(mapXY).map(([x, y]) => `<path transform="translate(${x.toFixed(0)} ${y.toFixed(0)})" d="M-17 6 Q-10 -12 0 -12 Q10 -12 17 6Z" fill="#8FD19A" stroke="#58AE6C" stroke-width="2.2" stroke-linejoin="round"/>`).join('');
+  const lab = (t, la, lo, dx = 0, dy = 0, sz = 17) => { const [x, y] = mapXY([la, lo]); return `<text x="${(x + dx).toFixed(0)}" y="${(y + dy).toFixed(0)}" text-anchor="middle" class="jl" style="font-size:${sz}px">${t}</text>`; };
+  const [ux, uy] = mapXY([33.504, 126.954]), [sx, sy] = mapXY([33.455, 126.936]);
+  const wv = []; seed = 31;
+  for (let t = 0; t < 400 && wv.length < 20; t++) { const x = 20 + rnd() * 800, y = 20 + rnd() * 530; if (inside(x, y) || inside(x + 30, y) || inside(x - 30, y) || inside(x, y + 20) || inside(x, y - 20) || Math.hypot(x - ux, y - uy) < 50) continue; wv.push([x, y]); }
+  const waves = wv.map(([x, y]) => `<path d="M${x.toFixed(0)} ${y.toFixed(0)} q6 -6 12 0 t12 0 t12 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".75"/>`).join('');
+  const cloud = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s})"><path d="M-40 14 Q-52 14 -50 2 Q-48 -10 -34 -8 Q-30 -26 -10 -24 Q4 -38 22 -26 Q42 -26 42 -8 Q56 -6 54 6 Q52 14 40 14Z" fill="#fff" opacity=".95"/></g>`;
+  _jmapBase = `<defs><linearGradient id="jsea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9FE0F6"/><stop offset="1" stop-color="#6CC8E6"/></linearGradient><linearGradient id="jland" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D8F2C8"/><stop offset="1" stop-color="#BFE6A8"/></linearGradient></defs>
+    <rect width="840" height="570" fill="url(#jsea)"/>${waves}
+    ${cloud(70, 60, 1.1)}${cloud(770, 520, 1)}${cloud(430, 540, .8)}
+    <path d="${d}" fill="none" stroke="#fff" stroke-width="16" stroke-linejoin="round" opacity=".75"/>
+    <path d="${d}" fill="url(#jland)" stroke="#5DAE6E" stroke-width="3.5" stroke-linejoin="round"/>
+    ${oreum}${trees.map(tree).join('')}
+    <g transform="translate(${hx.toFixed(0)} ${hy.toFixed(0)})"><path d="M-72 24 Q-36 -2 -16 -40 Q0 -54 16 -40 Q36 -2 72 24Z" fill="#7BC585" stroke="#3F9A55" stroke-width="3" stroke-linejoin="round"/><path d="M-18 -32 Q-8 -24 0 -32 Q8 -24 18 -32 Q10 -48 0 -50 Q-10 -48 -18 -32Z" fill="#fff" stroke="#3F9A55" stroke-width="2.4" stroke-linejoin="round"/><ellipse cx="0" cy="-40" rx="6" ry="2.6" fill="#8ED8F4"/><circle cx="-10" cy="-6" r="2.6" fill="#5B4636"/><circle cx="10" cy="-6" r="2.6" fill="#5B4636"/><path d="M-5 0 Q0 6 5 0" fill="none" stroke="#5B4636" stroke-width="2.2" stroke-linecap="round"/><circle cx="-17" cy="0" r="3.6" fill="#FF8FA8" opacity=".6"/><circle cx="17" cy="0" r="3.6" fill="#FF8FA8" opacity=".6"/></g>
+    <g transform="translate(${ux.toFixed(0)} ${uy.toFixed(0)})"><ellipse cx="6" cy="2" rx="22" ry="15" fill="#fff" opacity=".75"/><ellipse cx="6" cy="2" rx="18" ry="12" fill="url(#jland)" stroke="#5DAE6E" stroke-width="2.6"/><rect x="2" y="-16" width="8" height="14" fill="#fff" stroke="#5B4636" stroke-width="1.6"/><path d="M0 -16 L6 -23 L12 -16Z" fill="#FF6F61" stroke="#5B4636" stroke-width="1.6" stroke-linejoin="round"/></g>
+    <g transform="translate(${sx.toFixed(0)} ${sy.toFixed(0)})"><path d="M-26 14 L-18 -4 Q-8 -12 0 -8 Q8 -12 18 -4 L26 14Z" fill="#78C58A" stroke="#3F9A55" stroke-width="2.6" stroke-linejoin="round"/><path d="M-10 -4 Q0 4 10 -4" fill="none" stroke="#3F9A55" stroke-width="2.4" stroke-linecap="round"/></g>
+    ${lab('漢拏山', 33.3617, 126.5292, 0, 44)}${lab('牛島', 33.504, 126.954, -2, -30)}${lab('城山日出峰', 33.455, 126.936, -6, 34, 15)}${lab('濟州市', 33.52, 126.53, 0, -26)}${lab('西歸浦', 33.235, 126.56, 0, 6)}${lab('翰林', 33.40, 126.235, -20, 4, 15)}
+    <g transform="translate(790 78)"><circle r="26" fill="#fff" opacity=".8"/><path d="M0 -20 L5 0 L0 20 L-5 0Z" fill="#FF6F61" stroke="#5B4636" stroke-width="1.6"/><path d="M-20 0 L0 5 L20 0 L0 -5Z" fill="#fff" stroke="#5B4636" stroke-width="1.6"/><text y="-28" text-anchor="middle" font-size="12" font-weight="700" fill="#5B4636">N</text></g>
+    <g transform="translate(112 500)"><path d="M0 0 H56 L48 14 H8Z" fill="#FF6F61" stroke="#5B4636" stroke-width="2.4" stroke-linejoin="round"/><path d="M28 -32 V0" stroke="#5B4636" stroke-width="3"/><path d="M30 -30 Q52 -16 50 -4 H30Z" fill="#fff" stroke="#5B4636" stroke-width="2.4" stroke-linejoin="round"/><path d="M26 -26 Q8 -14 8 -4 H26Z" fill="#FFD84D" stroke="#5B4636" stroke-width="2.4" stroke-linejoin="round"/></g>
+    <g transform="translate(690 470)"><ellipse cx="0" cy="0" rx="20" ry="11" fill="#FF9F2E" stroke="#5B4636" stroke-width="2.4"/><path d="M18 0 L32 -10 L32 10Z" fill="#FF9F2E" stroke="#5B4636" stroke-width="2.4" stroke-linejoin="round"/><circle cx="-9" cy="-2" r="2.4" fill="#5B4636"/></g>`;
+  return _jmapBase;
+}
+function jejuMap(stops, selId) {
+  const pts = stops.filter(x => x.ll);
+  const nopin = stops.filter(x => !x.ll);
+  const xy = pts.map(x => mapXY(x.ll));
+  let vb = [0, 0, 840, 570], k = 1;
+  if (xy.length) { const xs = xy.map(c => c[0]), ys = xy.map(c => c[1]); const cx = (Math.min(...xs) + Math.max(...xs)) / 2, cy = (Math.min(...ys) + Math.max(...ys)) / 2; const w = Math.min(840, Math.max(380, Math.max(Math.max(...xs) - Math.min(...xs) + 220, (Math.max(...ys) - Math.min(...ys) + 160) * 840 / 570))); const h = w * 570 / 840; k = w / 840; vb = [Math.max(0, Math.min(840 - w, cx - w / 2)), Math.max(0, Math.min(570 - h, cy - h / 2)), w, h]; }
+  const route = xy.map((c, i) => (i ? 'L' : 'M') + c.map(v => v.toFixed(0)).join(' ')).join(' ');
+  const still = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const pin = (x, i) => { const [cx, cy] = xy[i]; const on = x.id === selId; const c = TYPE_COL[x.type] || '#3DBB7E'; const s = (on ? 1.3 : 1) * k * 1.15;
+    return `<g class="pin ${on ? 'on' : ''}" data-mapsel="${x.id}" tabindex="0" transform="translate(${cx.toFixed(0)} ${cy.toFixed(0)}) scale(${s.toFixed(3)})"><ellipse cx="0" cy="1" rx="9" ry="3.4" fill="#000" opacity=".18"/><g class="bob"><path d="M0 0 C-7 -10 -14 -17 -14 -26 A14 14 0 1 1 14 -26 C14 -17 7 -10 0 0Z" fill="${c}" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><circle cx="0" cy="-26" r="9.5" fill="#fff"/><text y="-21.5" text-anchor="middle" class="pn" fill="${c}">${i + 1}</text></g></g>`; };
+  return `<div class="jmap"><svg viewBox="${vb.map(v => v.toFixed(0)).join(' ')}" role="img" aria-label="濟州島插畫地圖（位置為示意）">
+    ${jejuBase()}
+    ${xy.length > 1 ? `<path d="${route}" fill="none" stroke="#fff" stroke-width="${(7 * k).toFixed(1)}" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/><path class="route" d="${route}" fill="none" stroke="#FF6F61" stroke-width="${(3.6 * k).toFixed(1)}" stroke-dasharray="${(9 * k).toFixed(1)} ${(8 * k).toFixed(1)}" stroke-linecap="round" stroke-linejoin="round"/>` : ''}
+    ${xy.length > 1 && !still ? `<g><text font-size="${(26 * k).toFixed(1)}" text-anchor="middle" dy="${(9 * k).toFixed(1)}">🚗</text><animateMotion dur="${Math.max(8, xy.length * 2.2)}s" repeatCount="indefinite" path="${route}"/></g>` : ''}
+    ${pts.map(pin).join('')}
+  </svg>
+  <ol class="jleg">${pts.map((x, i) => `<li class="${x.id === selId ? 'on' : ''}" data-mapsel="${x.id}"><b style="background:${TYPE_COL[x.type] || '#3DBB7E'}">${i + 1}</b> ${TYPE_EMO[x.type] || ''} ${esc(x.name.replace(/（.*?）/g, ''))}</li>`).join('')}</ol>
+  <p class="small mute" style="margin:8px 0 0">插畫地圖，圖釘位置只是示意（依記憶中的大概位置），實際請用下方的導航按鈕。</p>
+  ${nopin.length ? `<p class="small mute" style="margin:6px 0 0">未標示（地點未定／待確認）：${nopin.map(x => esc(x.name.replace(/（.*?）/g, ''))).join('、')}</p>` : ''}</div>`;
+}
+function vDay(el) {
+  const d = TRIP.days[S.day - 1];
+  const hotel = hotelById(d.hotel);
+  const flagIds = [...new Set([...d.stops.flatMap(s => s.flags || []), ...TRIP.flags.filter(f => f.day === d.n).map(f => f.id)])];
+  const mapStops = d.stops.filter(s => s.q || (S.custom[s.id] && S.custom[s.id].name));
+  const selId = S.mapSel[d.n] || (mapStops[0] && mapStops[0].id);
+  const mealGroups = (d.meals || []).map(m => ({ k: m.k, list: m.ids.map(foodById).filter(Boolean) })).filter(m => m.list.length);
+  el.innerHTML = `
+  <div class="wrap">
+    <div class="daybar">${TRIP.days.map(x => `<button class="dtab ${x.n === d.n ? 'on' : ''}" data-go="day${x.n}"><b>DAY ${x.n}</b><span>${x.date}（${x.weekday}）</span></button>`).join('')}</div>
+    <section class="dayhero"><span class="washi"></span><div class="art" style="${dayArt(d)}"></div>
+      <div class="txt"><div class="big">Day ${d.n}</div><div class="mute small">2026/${d.date}（${d.weekday}）</div><h2 style="margin-top:4px">${esc(d.title)}</h2><p style="margin:8px 0 0">${esc(d.summary)}</p></div></section>
+    ${flagList(flagIds)}
+    <section class="sec" style="margin-top:28px">${secH('當日時間軸', 'Timeline')}
+      <div class="tl">${d.stops.map((s, i) => stopHTML(s, i, d.stops.length)).join('')}</div></section>
+
+    <section class="sec">${secH('地圖與導航', 'Maps')}
+      <div class="card mapcard">
+        <div class="chips">${mapStops.map(s => `<button class="btn sm ${s.id === selId ? 'on' : ''}" data-mapsel="${s.id}">${esc(s.name.replace(/（.*?）/g, ''))}</button>`).join('')}</div>
+        ${jejuMap(mapStops, selId)}
+        <p class="small mute" style="margin:8px 0 12px">示意地圖：位置是我依地名估的<b>大概位置</b>（可能差數公里），虛線只是順序連線，不是實際路線。要導航請用下方按鈕在 NAVER／Google 開啟。</p>
+        <div class="acts" style="margin-top:0">
+          ${(() => { const q = mapStops.map(s => stopQuery(s)); if (q.length < 2) return ''; return `<a class="btn pri" target="_blank" rel="noopener" href="${gdir(q[0], q[q.length - 1], q.slice(1, -1))}">🗺 Google：當日路線</a>`; })()}
+          ${selId ? `<a class="btn" target="_blank" rel="noopener" href="${gmap(stopQuery(d.stops.find(s => s.id === selId)))}">Google 地圖</a><a class="btn blue" target="_blank" rel="noopener" href="${nmap(stopQuery(d.stops.find(s => s.id === selId)))}">NAVER 地圖</a>` : ''}
+        </div>
+        <details id="mapdet" style="margin-top:12px" ${S.mapOpen ? 'open' : ''}><summary class="small">嵌入式 Google 地圖（部分環境無法顯示；發布後的網站通常可以）</summary>
+          ${selId ? `<iframe id="mapframe" title="地圖預覽" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ${S.mapOpen ? `src="https://www.google.com/maps?q=${enc(stopQuery(d.stops.find(s => s.id === selId)))}&output=embed&hl=zh-TW"` : ''} data-src="https://www.google.com/maps?q=${enc(stopQuery(d.stops.find(s => s.id === selId)))}&output=embed&hl=zh-TW"></iframe>` : '<p class="small mute">先在景點卡片輸入地點名稱</p>'}</details>
+        <div class="tipbox" style="margin-top:14px"><h4>🚗 導航小提醒</h4><ul>
+          <li>Google Maps 在韓國沒有完整的開車導航功能，實際開車請用 <b>NAVER Map</b> 或 <b>Kakao Map</b>（App 內搜尋店名／韓文地址後按「길찾기」）。</li>
+          <li>最穩的方式：在租車的車載導航直接輸入<b>電話號碼</b>或韓文名稱。有電話的地點會顯示在卡片上。</li>
+          <li>以上「約 X 分」的車程都是我粗估的，請以導航為準。</li></ul></div>
+      </div></section>
+
+    ${mealGroups.length ? `<section class="sec">${secH('當日餐廳參考（每餐多個選項）', 'Eat')}
+      <p class="small mute" style="margin:-6px 0 10px">每餐列出幾間「評價高／榜單推薦」的選擇，依動線與營業時間挑；來源與「待確認」項目請看餐廳專區，出發前請在 NAVER 再確認。</p>
+      ${mealGroups.map(m => `<h4 class="mealh">${esc(m.k)}</h4><div class="grid g3">${m.list.map(f => `<div class="card mealc"><div class="badge-row"><span class="chip">${esc(f.meal)}</span><span class="chip blue">${esc(f.area)}</span></div><h3>${esc(f.name)}</h3><div class="small mute">${esc(f.kr)}</div><div class="kv"><b>營業</b>${tbc(f.hours)}</div><div class="kv"><b>公休</b>${tbc(f.closed)}</div><div class="kv"><b>推薦</b>${esc(f.dishes)}</div><div class="acts"><button class="btn sm" data-go="food">詳細</button><a class="btn sm" target="_blank" rel="noopener" href="${gmap(f.q)}">Google</a><a class="btn sm blue" target="_blank" rel="noopener" href="${nmap(f.q)}">NAVER</a></div></div>`).join('')}</div>`).join('')}
+    </section>` : ''}
+
+    <section class="sec">${d.n !== 4 ? secH('當日住宿', 'Stay') : ''}
+      ${hotel && d.n !== 4 ? `<div class="card hotel"><img class="ph" src="${artUrl(hotel.photo)}" alt=""><div><span class="chip">${esc(hotel.nights)}</span><h3 style="margin-top:6px">${esc(hotel.name)} <span class="kr mute small">${esc(hotel.kr)}</span></h3>
+        <div class="small" style="margin-top:4px">入住 ${esc(hotel.checkIn)}　退房 ${esc(hotel.checkOut)}</div><div class="kv"><b>地址</b>${esc(hotel.addr)}</div><div class="kv"><b>電話</b>${esc(hotel.phone)}</div><div class="small mute" style="margin-top:6px">${esc(hotel.note)}</div>
+        ${hotel.shop ? `<div class="kv" style="display:block;margin-top:8px"><b>附近購物／商場</b><ul class="list small">${hotel.shop.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+        <div class="acts"><a class="btn sm" target="_blank" rel="noopener" href="${gmap(hotel.q)}">Google</a><a class="btn sm" target="_blank" rel="noopener" href="${nmap(hotel.q)}">NAVER</a></div></div></div>` : ''}</section>
+
+    <section class="sec">${secH('注意事項與備註', 'Notes')}
+      <div class="grid g2"><div class="tipbox"><h4>❄ 當日注意事項</h4><ul>${d.tips.map(t => `<li>${esc(t)}</li>`).join('')}</ul></div>
+        <div class="card"><h4 style="margin-bottom:8px">✏ 我的備註（自動儲存在這支裝置）</h4><textarea class="note" data-note="${d.n}" placeholder="寫下集合時間、訂位資訊、想買的東西…">${esc(S.notes[d.n] || '')}</textarea></div></div></section>
+
+    <div class="pager">${d.n > 1 ? `<button class="btn" data-go="day${d.n - 1}">← Day ${d.n - 1}</button>` : '<span></span>'}${d.n < 4 ? `<button class="btn pri" data-go="day${d.n + 1}">Day ${d.n + 1} →</button>` : `<button class="btn pri" data-go="home">回首頁</button>`}</div>
+  </div>`;
+  hydrateSlots(el);
+}
+function stopHTML(s, i, n) {
+  const ic = TYPE[s.type] || TYPE.sight; const cus = S.custom[s.id] || {};
+  const q = stopQuery(s); const hasQ = !!q;
+  const food = s.foodId ? foodById(s.foodId) : null;
+  const fl = (s.flags || []).map(flagById).filter(Boolean);
+  const nextDrive = s.drive;
+  return `
+  <div class="tl-item ${s.type} ${i === n - 1 ? 'last' : ''}">
+    <div class="tl-time">${s.time ? esc(s.time) : ''}</div>
+    <div class="tl-rail"><span class="tl-dot"></span></div>
+    <div class="card tl-card"><div class="tl-media">
+      ${slotHTML(s.id, s.art || (s.hotelId ? hotelById(s.hotelId).photo : ''), ic[0], s.art ? '簡報插畫' : (s.hotelId ? '訂單截圖' : ''))}
+      <div class="in">
+        <div class="meta"><span class="chip ${s.type === 'meal' ? 'clay' : 'blue'}">${ic[0]} ${ic[1]}</span>${fl.length ? `<span class="chip clay">⚠ ${fl.length} 項待確認</span>` : ''}</div>
+        <h3>${esc(s.name)}${s.kr ? `<span class="kr">${esc(s.kr)}</span>` : ''}</h3>
+        <p style="margin:6px 0 4px;font-size:14px">${esc(s.desc)}</p>
+        <div class="kv"><b>地址</b>${esc(cus.addr || s.addr || '待確認')}</div>
+        <div class="kv"><b>停留</b>${esc(s.stay || '—')}${s.stayFrom ? ` <span class="chip ${s.stayFrom === 'PDF' ? 'sage' : ''}" style="padding:0 8px">${s.stayFrom === 'PDF' ? 'PDF 指定' : '建議時間'}</span>` : ''}</div>
+        ${s.hours ? `<div class="kv"><b>營業</b>${esc(s.hours)}</div>` : ''}
+        ${s.deadline ? `<div class="deadline">⏰ ${esc(s.deadline)}</div>` : ''}
+        ${s.phone ? `<div class="kv"><b>電話</b>${esc(s.phone)}（可輸入車載導航）</div>` : ''}
+        ${s.custom ? `<div class="addrow" style="margin-top:10px"><input class="inp" data-custom="${s.id}" data-f="name" placeholder="輸入地點名稱（韓文或英文最準）" value="${esc(cus.name || '')}"><input class="inp" data-custom="${s.id}" data-f="addr" placeholder="地址（選填）" value="${esc(cus.addr || '')}"></div>` : ''}
+        ${s.refs ? `<div class="chips">${s.refs.map(r => `<a class="btn sm" target="_blank" rel="noopener" href="${gmap(r.q)}">📍 ${esc(r.name)}</a>`).join('')}</div>` : ''}
+        ${s.tips ? `<ul class="list small" style="margin-top:8px;color:var(--brown-d)">${s.tips.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
+        <div class="acts">
+          ${(s.links || []).map(l => `<a class="btn sm pri" target="_blank" rel="noopener" href="${l.u}">${esc(l.l)}</a>`).join('')}
+          ${hasQ ? `<a class="btn sm" target="_blank" rel="noopener" href="${gmap(q)}">Google Maps</a><a class="btn sm blue" target="_blank" rel="noopener" href="${s.naverLink && !cus.name ? s.naverLink : nmap(q)}">NAVER Map</a>` : `<span class="small mute">輸入地點名稱後會出現地圖連結</span>`}
+          ${food ? `<button class="btn sm" data-go="food">看餐廳資料</button>` : ''}
+          ${s.id === 'd3b' ? `<button class="btn sm pri" data-go="udo">⛴ 看完整船班時刻（出發前請確認）</button>` : ''}
+        </div>
+      </div></div></div>
+  </div>
+  ${nextDrive && i < n - 1 ? `<div class="drive"><div></div><div class="rail"></div><div class="tx"><span class="tag">🚗 ${esc(nextDrive.t)}</span><span>${esc(nextDrive.n)}</span></div></div>` : ''}`;
+}
+
+/* ============================================================
+   餐廳專區
+   ============================================================ */
+function vFood(el) {
+  const list = TRIP.restaurants.filter(r => S.foodFilter === 0 || r.days.includes(S.foodFilter));
+  el.innerHTML = `<div class="wrap"><section class="sec" style="margin-top:26px">${secH('餐廳專區', 'Eat well')}
+    <p class="mute" style="margin:-6px 0 14px">依行程動線挑選，不是為了填滿版面。<b>營業時間、公休日、價格</b>若我沒有查到，一律標示「待確認」；有來源的資料都附上連結，出發前請在 NAVER Map 再確認一次。</p>
+    <div class="filters">${[[0, '全部'], [1, 'Day 1'], [2, 'Day 2'], [3, 'Day 3'], [4, 'Day 4']].map(([k, t]) => `<button class="btn sm ${S.foodFilter === k ? 'on' : ''}" data-ff="${k}">${t}</button>`).join('')}</div>
+    <div class="grid g3">${list.map(foodCard).join('')}</div>
+    ${!list.length ? '<p class="mute">這一天還沒有推薦。</p>' : ''}</section></div>`;
+  hydrateSlots(el);
+}
+const tbc = v => /待確認/.test(v) ? `<span class="tbc">${esc(v)}</span>` : esc(v);
+function foodCard(r) {
+  return `<article class="card fcard">
+    ${slotHTML('food:' + r.id, r.art || 'ic_fork', '🍜', r.kr)}
+    <div class="in"><div class="badge-row"><span class="chip">${esc(r.meal)}</span>${r.days.map(d => `<span class="chip blue">Day ${d}</span>`).join('')}<span class="chip ${r.status === 'ok' ? 'sage' : 'clay'}">${r.status === 'ok' ? '資料已查到' : '部分待確認'}</span><span class="chip ${r.tag ? 'sage' : ''}">${r.tag === 'pdf' ? '行程指定' : r.tag === 'you' ? '你指定' : '推薦選項（行程沒指定）'}</span></div>
+    <h3>${esc(r.name)}</h3><div class="small mute">${esc(r.kr)}・${esc(r.area)}</div>
+    <div class="kv" style="margin-top:8px"><b>營業時間</b>${tbc(r.hours)}</div><div class="kv"><b>公休日</b>${tbc(r.closed)}</div><div class="kv"><b>價格</b>${tbc(r.price)}</div><div class="kv"><b>推薦餐點</b>${esc(r.dishes)}</div>
+    <div class="kv"><b>地址</b>${tbc(r.addr)}</div>${r.phone ? `<div class="kv"><b>電話</b>${esc(r.phone)}</div>` : ''}
+    <div class="kv"><b>動線</b>${esc(r.near)}</div><p class="small mute" style="margin:8px 0 0">${esc(r.note)}</p>
+    <div class="acts" style="margin-top:auto;padding-top:12px"><a class="btn sm" target="_blank" rel="noopener" href="${gmap(r.q)}">Google Maps</a><a class="btn sm blue" target="_blank" rel="noopener" href="${nmap(r.q)}">NAVER Map</a></div>
+    <div class="small mute" style="margin-top:8px">來源：${r.src.map(s => `<a target="_blank" rel="noopener" href="${esc(s.u)}">${esc(s.t)}</a>`).join('、')}</div></div></article>`;
+}
+
+/* ============================================================
+   預算
+   ============================================================ */
+const toTWD = e => e.cur === 'KRW' ? e.amt / S.budget.krw : e.amt;
+function budgetCalc() {
+  const b = S.budget, cats = TRIP.budgetCats; const act = {}; cats.forEach(c => act[c] = 0);
+  const paid = {}; b.members.forEach(m => paid[m] = 0);
+  let total = 0;
+  b.expenses.forEach(e => { const v = toTWD(e); act[e.cat] = (act[e.cat] || 0) + v; total += v; paid[e.payer] = (paid[e.payer] || 0) + v; });
+  const budgetTotal = cats.reduce((s, c) => s + (+b.budgets[c] || 0), 0);
+  return { act, paid, total, budgetTotal };
+}
+function vBudget(el) {
+  const b = S.budget, c = budgetCalc(), cats = TRIP.budgetCats; const diff = c.budgetTotal - c.total; const share = c.total / (b.members.length || 1);
+  el.innerHTML = `<div class="wrap"><section class="sec" style="margin-top:26px">${secH('旅行預算管理', 'Budget')}
+    <div class="grid g4">
+      <div class="card stat"><span class="l">預算總額（台幣）</span><span class="v">NT$ ${fmt(c.budgetTotal)}</span></div>
+      <div class="card stat"><span class="l">實際花費（台幣）</span><span class="v">NT$ ${fmt(c.total)}</span></div>
+      <div class="card stat ${diff < 0 ? 'neg' : 'pos'}"><span class="l">${diff < 0 ? '超出預算' : '預算剩餘'}</span><span class="v">NT$ ${fmt(Math.abs(diff))}</span></div>
+      <div class="card stat"><span class="l">每人平均（${b.members.length} 人）</span><span class="v">NT$ ${fmt(share)}</span></div>
+    </div>
+
+    <div class="grid g2" style="margin-top:16px">
+      <div class="card"><h3 style="margin-bottom:10px">💱 匯率與成員</h3>
+        <label class="small mute">匯率：1 元台幣（TWD）＝ 幾韓元（KRW），預設 40.69，可直接修改</label>
+        <div class="addrow" style="margin-top:4px"><span style="align-self:center" class="small">NT$ 1 ＝ ₩</span><input class="inp" id="rate" type="number" step="0.01" min="0" value="${b.krw}"><span style="align-self:center" class="small mute">≈ ₩10,000 = NT$ ${(10000 / b.krw).toFixed(0)}</span></div>
+        <label class="small mute" style="display:block;margin-top:12px">付款人名單（直接改名字）</label>
+        <div class="grid g2" style="gap:8px;margin-top:4px">${b.members.map((m, i) => `<input class="inp" data-member="${i}" value="${esc(m)}">`).join('')}</div></div>
+      <div class="card"><h3 style="margin-bottom:10px">🧾 誰付了多少（台幣）</h3>
+        ${b.members.map(m => { const p = c.paid[m] || 0, bal = p - share; return `<div style="display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px dashed var(--line)"><span>${esc(m)}</span><span>已付 NT$ ${fmt(p)}　<b style="color:${bal >= 0 ? '#55704a' : '#a85a3f'}">${bal >= 0 ? '應收 ' : '應付 '}NT$ ${fmt(Math.abs(bal))}</b></span></div>`; }).join('')}
+        <p class="small mute" style="margin:8px 0 0">依「全員平均分攤」計算；若有人不分攤某筆，請自行調整。</p></div>
+    </div>
+
+    <div class="card" style="margin-top:16px"><h3 style="margin-bottom:6px">📊 各項預算 vs 實際</h3><div class="scroll-x"><table class="t"><thead><tr><th>項目</th><th class="tr">預算（台幣）</th><th class="tr">實際（台幣）</th><th class="tr">差額</th><th>進度</th></tr></thead><tbody>
+      ${cats.map(k => { const bu = +b.budgets[k] || 0, a = c.act[k] || 0, df = bu - a, pct = bu ? Math.min(100, a / bu * 100) : (a ? 100 : 0); return `<tr><td>${esc(k)}</td><td class="tr"><input class="inp" style="width:110px;text-align:right" type="number" min="0" data-budget="${esc(k)}" value="${bu || ''}" placeholder="0"></td><td class="tr">${fmt(a)}</td><td class="tr" style="color:${df < 0 ? '#a85a3f' : '#55704a'}">${bu || a ? (df < 0 ? '−' : '+') + fmt(Math.abs(df)) : '—'}</td><td><div class="bar ${a > bu && bu ? 'over' : ''}"><i style="width:${pct}%"></i></div></td></tr>`; }).join('')}
+      <tr><td><b>合計</b></td><td class="tr"><b>${fmt(c.budgetTotal)}</b></td><td class="tr"><b>${fmt(c.total)}</b></td><td class="tr"><b style="color:${diff < 0 ? '#a85a3f' : '#55704a'}">${diff < 0 ? '−' : '+'}${fmt(Math.abs(diff))}</b></td><td></td></tr></tbody></table></div>
+      <p class="small mute" style="margin:8px 0 0">ETC／高速公路費：據我所知濟州島幾乎沒有收費高速公路，這項可能是 0，仍請向租車公司確認是否有其他通行費。</p></div>
+
+    <div class="card" style="margin-top:16px"><h3 style="margin-bottom:10px">＋ 新增一筆支出</h3>
+      <form id="expForm" class="form">
+        <div><label>日期</label><input class="inp" type="date" name="date" value="${esc(S.budget.lastDate || TRIP.startDate)}" min="2026-11-01" max="2026-12-31"></div>
+        <div><label>項目分類</label><select class="inp" name="cat">${cats.map(k => `<option>${esc(k)}</option>`).join('')}</select></div>
+        <div class="c2"><label>說明</label><input class="inp" name="item" placeholder="例如：租車費、午餐" maxlength="60"></div>
+        <div><label>金額</label><input class="inp" name="amt" type="number" step="any" min="0" inputmode="decimal" placeholder="0" required></div>
+        <div><label>幣別</label><div class="seg" id="curSeg"><button type="button" data-cur="KRW" class="${b.cur === 'KRW' ? 'on' : ''}">韓元 ₩</button><button type="button" data-cur="TWD" class="${b.cur === 'TWD' ? 'on' : ''}">台幣 NT$</button></div></div>
+        <div class="c2"><label>誰付款</label><select class="inp" name="payer">${b.members.map(m => `<option>${esc(m)}</option>`).join('')}</select></div>
+        <div class="c2"><label>備註（選填）</label><input class="inp" name="note" maxlength="60"></div>
+        <div class="c2"><button class="btn pri" style="width:100%;justify-content:center;padding:10px">加入支出</button></div>
+      </form></div>
+
+    <div class="card" style="margin-top:16px"><h3>🧺 支出明細（${b.expenses.length} 筆）</h3>
+      ${b.expenses.length ? [...b.expenses].sort((a, z) => (z.date || '').localeCompare(a.date || '') || 0).map(e => `<div class="exp"><div class="small mute">${esc((e.date || '').slice(5).replace('-', '/'))}</div>
+        <div><b>${esc(e.item || e.cat)}</b> <span class="chip">${esc(e.cat)}</span></div>
+        <div class="amt"><b>${e.cur === 'KRW' ? '₩' : 'NT$'} ${fmt(e.amt)}</b><div class="small mute">${e.cur === 'KRW' ? '≈ NT$ ' + fmt(toTWD(e)) : ''}</div></div>
+        <div class="row2"><span class="small">付款：${esc(e.payer)}</span>${e.note ? `<span class="small mute">${esc(e.note)}</span>` : ''}<span style="flex:1"></span><button class="btn sm" data-editexp="${e.id}">修改</button><button class="btn sm danger" data-delexp="${e.id}">刪除</button></div></div>`).join('') : '<p class="mute">還沒有支出，從上方新增第一筆吧。</p>'}
+    </div>
+
+    <div class="card soft" style="margin-top:16px"><h3 style="margin-bottom:6px">💾 備份／搬到另一支手機</h3>
+      <p class="small mute" style="margin:0 0 8px">資料存在這支裝置的瀏覽器裡，重新整理不會消失；換手機或和夥伴共用時，用下面的備份文字複製過去再貼上匯入（預算、清單、備註都會一起備份，照片除外）。</p>
+      <div class="acts" style="margin-top:0"><button class="btn sm" data-backup="copy">複製備份文字</button><button class="btn sm" data-backup="import">貼上匯入</button><button class="btn sm danger" data-backup="reset">清空預算資料</button></div>
+      <textarea class="note hide" id="backupBox" style="margin-top:10px"></textarea><div class="acts hide" id="backupAct"><button class="btn sm pri" data-backup="doimport">確定匯入</button></div></div>
+  </section></div>`;
+}
+function editExpModal(id) {
+  const e = S.budget.expenses.find(x => x.id === id); if (!e) return;
+  const m = document.createElement('div'); m.className = 'modal';
+  m.innerHTML = `<div class="card"><h3 style="margin-bottom:12px">修改支出</h3><form class="form" id="editForm">
+    <div class="c3"><label>日期</label><input class="inp" type="date" name="date" value="${esc(e.date)}"></div><div class="c3"><label>分類</label><select class="inp" name="cat">${TRIP.budgetCats.map(k => `<option ${k === e.cat ? 'selected' : ''}>${esc(k)}</option>`).join('')}</select></div>
+    <div class="c3"><label>說明</label><input class="inp" name="item" value="${esc(e.item)}"></div><div class="c3"><label>金額</label><input class="inp" name="amt" type="number" step="any" value="${e.amt}"></div>
+    <div class="c3"><label>幣別</label><select class="inp" name="cur"><option value="KRW" ${e.cur === 'KRW' ? 'selected' : ''}>韓元 ₩</option><option value="TWD" ${e.cur === 'TWD' ? 'selected' : ''}>台幣 NT$</option></select></div>
+    <div class="c3"><label>付款人</label><select class="inp" name="payer">${S.budget.members.map(x => `<option ${x === e.payer ? 'selected' : ''}>${esc(x)}</option>`).join('')}</select></div>
+    <div class="c3" style="grid-column:span 6"><label>備註</label><input class="inp" name="note" value="${esc(e.note || '')}"></div>
+    <div class="c3"><button class="btn pri" style="width:100%;justify-content:center">儲存</button></div><div class="c3"><button type="button" class="btn" data-closemodal style="width:100%;justify-content:center">取消</button></div></form></div>`;
+  document.body.appendChild(m);
+  m.addEventListener('click', ev => { if (ev.target === m || ev.target.dataset.closemodal !== undefined) m.remove(); });
+  $('#editForm', m).addEventListener('submit', ev => {
+    ev.preventDefault(); const f = new FormData(ev.target); const amt = parseFloat(f.get('amt'));
+    if (!(amt >= 0)) return toast('請輸入正確金額');
+    Object.assign(e, { date: f.get('date'), cat: f.get('cat'), item: f.get('item'), amt, cur: f.get('cur'), payer: f.get('payer'), note: f.get('note') });
+    saveBudget(); m.remove(); vBudget($('#view')); toast('已更新');
+  });
+}
+
+/* ============================================================
+   相簿
+   ============================================================ */
+async function loadPhotos() {
+  const all = await DB.all('photos');
+  S.photos = all.sort((a, b) => b.ts - a.ts);
+  S.photos.forEach(p => { if (!S.urls[p.id]) S.urls[p.id] = URL.createObjectURL(p.blob); });
+}
+const PH_FILTERS = [['all', '全部'], ['1', 'DAY 1'], ['2', 'DAY 2'], ['3', 'DAY 3'], ['4', 'DAY 4'], ['0', '其他']];
+async function vPhotos(el) {
+  el.innerHTML = `<div class="wrap"><section class="sec" style="margin-top:26px">${secH('旅行照片牆', 'Photo album')}
+    <div class="drop"><div style="font-size:30px">📷</div><p style="margin:4px 0 12px">選擇照片後，指定要放進哪一天；系統會自動縮圖並存在這支裝置裡。</p>
+      <div class="acts" style="justify-content:center;margin-top:0"><select class="inp" id="upDay" style="width:auto"><option value="1">DAY 1</option><option value="2">DAY 2</option><option value="3">DAY 3</option><option value="4">DAY 4</option><option value="0">其他</option></select><button class="btn pri" data-upload>＋ 上傳照片</button></div>
+      ${DB.broken ? '<p class="small" style="color:#a85a3f;margin:10px 0 0">這個環境無法永久儲存照片，關閉頁面後會消失。</p>' : ''}</div>
+    <div class="filters" style="margin-top:18px">${PH_FILTERS.map(([k, t]) => `<button class="btn sm ${S.photoFilter === k ? 'on' : ''}" data-pf="${k}">${t}</button>`).join('')}</div>
+    <div id="gal"><p class="mute">載入中…</p></div></section></div>`;
+  await loadPhotos(); drawGallery();
+}
+function drawGallery() {
+  const g = $('#gal'); if (!g) return;
+  const list = S.photos.filter(p => S.photoFilter === 'all' || String(p.day) === S.photoFilter);
+  g.innerHTML = list.length ? `<div class="masonry">${list.map(p => `<figure data-ph="${p.id}"><img loading="lazy" src="${S.urls[p.id]}" alt="${esc(p.caption || '旅行照片')}"><figcaption><span>${esc(p.caption || '')}</span><span>${p.day ? 'DAY ' + p.day : '其他'}</span></figcaption></figure>`).join('')}</div>` : '<p class="mute" style="margin-top:20px">還沒有照片。出發後把美好的瞬間放在這裡吧。</p>';
+}
+let lbList = [], lbIdx = 0;
+function openLB(id) {
+  lbList = S.photos.filter(p => S.photoFilter === 'all' || String(p.day) === S.photoFilter); lbIdx = Math.max(0, lbList.findIndex(p => p.id === id)); drawLB();
+}
+function drawLB() {
+  let lb = $('#lb'); const p = lbList[lbIdx]; if (!p) { if (lb) lb.remove(); return; }
+  if (!lb) { lb = document.createElement('div'); lb.id = 'lb'; lb.className = 'lb'; document.body.appendChild(lb); }
+  lb.innerHTML = `<button class="btn x" data-lb="close">✕ 關閉</button><button class="nv l" data-lb="prev" aria-label="上一張">‹</button><button class="nv r" data-lb="next" aria-label="下一張">›</button>
+    <img src="${S.urls[p.id]}" alt="${esc(p.caption || '')}"><div class="bar2"><input class="inp" id="lbcap" style="flex:1;min-width:180px" placeholder="加上說明文字" value="${esc(p.caption || '')}" maxlength="80">
+    <select class="inp" id="lbday" style="width:auto">${[1, 2, 3, 4, 0].map(d => `<option value="${d}" ${p.day === d ? 'selected' : ''}>${d ? 'DAY ' + d : '其他'}</option>`).join('')}</select>
+    <button class="btn danger" data-lb="del">刪除</button><span style="color:#fff;font-size:12px">${lbIdx + 1} / ${lbList.length}</span></div>`;
+}
+function lbMove(d) { if (!lbList.length) return; lbIdx = (lbIdx + d + lbList.length) % lbList.length; drawLB(); }
+
+/* ============================================================
+   清單
+   ============================================================ */
+function vCheck(el) {
+  const all = S.checklist.flatMap(g => g.items), done = all.filter(i => i.done).length, pct = all.length ? Math.round(done / all.length * 100) : 0;
+  el.innerHTML = `<div class="wrap"><section class="sec" style="margin-top:26px">${secH('旅行清單', 'Checklist')}
+    <div class="card" style="margin-bottom:16px"><div style="display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap"><b>完成度 ${done} / ${all.length}（${pct}%）</b><span style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn sm" data-ckreset>全部取消勾選</button><button class="btn sm" data-ckrestore>還原預設清單</button></span></div><div class="prog" style="margin-top:8px"><i style="width:${pct}%"></i></div><p class="small mute" style="margin:8px 0 0">全部都可以自己改：點項目文字直接修改（改完離開輸入框就存）、✕ 刪除、每組底下可新增；組名也能改，還能新增或刪除整組。資料存在這支裝置。</p></div>
+    <div class="grid g2">${S.checklist.map(g => { const gd = g.items.filter(i => i.done).length; return `<div class="card ck-g"><div class="ckhead"><input class="inp gname" data-ckgname="${g.id}" value="${esc(g.name)}" aria-label="組名"><span class="small mute">${gd}/${g.items.length}</span><button class="del" data-ckgdel="${g.id}" aria-label="刪除整組" title="刪除整組">🗑</button></div>
+      ${g.items.map(i => `<div class="ck ${i.done ? 'done' : ''}"><input type="checkbox" data-ck="${g.id}|${i.id}" ${i.done ? 'checked' : ''} id="c${i.id}"><input class="ckt" data-cktext="${g.id}|${i.id}" value="${esc(i.text)}" aria-label="項目文字"><button class="del" data-ckdel="${g.id}|${i.id}" aria-label="刪除">✕</button></div>`).join('')}
+      <form class="addrow" data-ckadd="${g.id}"><input class="inp" placeholder="新增項目…" maxlength="80"><button class="btn sm pri">加入</button></form></div>`; }).join('')}</div>
+    <form class="card addrow" data-ckgadd style="margin-top:16px"><input class="inp" placeholder="新增一個分類（例如：伴手禮、藥品）" maxlength="30"><button class="btn pri">＋ 新增分類</button></form></section></div>`;
+}
+
+/* ============================================================
+   天氣
+   ============================================================ */
+const WCODE = { 0: '晴', 1: '大致晴', 2: '多雲時晴', 3: '陰', 45: '霧', 48: '霧淞', 51: '毛毛雨', 53: '毛毛雨', 55: '毛毛雨', 56: '凍毛毛雨', 57: '凍毛毛雨', 61: '小雨', 63: '中雨', 65: '大雨', 66: '凍雨', 67: '凍雨', 71: '小雪', 73: '中雪', 75: '大雪', 77: '雪粒', 80: '陣雨', 81: '陣雨', 82: '強陣雨', 85: '陣雪', 86: '強陣雪', 95: '雷雨', 96: '雷雨夾冰雹', 99: '強雷雨夾冰雹' };
+async function fetchWeather(p) {
+  if (S.weather[p.id]) return S.weather[p.id];
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${p.lat}&longitude=${p.lon}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,snowfall_sum,wind_speed_10m_max,wind_gusts_10m_max,sunset&wind_speed_unit=ms&timezone=Asia%2FSeoul&forecast_days=16`;
+  const ctl = new AbortController(); const to = setTimeout(() => ctl.abort(), 9000);
+  try { const r = await fetch(url, { signal: ctl.signal }); if (!r.ok) throw new Error(r.status); const j = await r.json(); S.weather[p.id] = j; return j; }
+  finally { clearTimeout(to); }
+}
+async function vWeather(el) {
+  el.innerHTML = `<div class="wrap"><section class="sec" style="margin-top:26px">${secH('天氣資訊', 'Weather')}
+    <div class="card soft" style="margin-bottom:16px"><h3 style="margin-bottom:6px">🌤 11 月濟州典型氣候（歷史平均，<u>不是預報</u>）</h3>
+      <ul class="list small">${TRIP.climate.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+      <p class="small mute" style="margin:6px 0 0">來源：${TRIP.climateSrc.map(x => `<a target="_blank" rel="noopener" href="${esc(x.u)}">${esc(x.t)}</a>`).join('、')}（各資料數字略有出入，所以給範圍）</p></div>
+    <p class="mute" style="margin:-6px 0 10px">下面是即時預報（Open-Meteo，只顯示 11/21–11/24，約出發前 16 天內才有資料）。<b>官方天氣警報請看韓國氣象廳（KMA）</b>。<button class="btn sm" data-wretry style="margin-left:6px">重新載入</button></p>
+    <div id="wlist" class="grid g2">${TRIP.weatherPlaces.map(p => `<div class="card wcard" id="w_${p.id}"><h3>${esc(p.name)}</h3><p class="mute small">載入中…</p></div>`).join('')}</div>
+    <div class="card soft" style="margin-top:16px"><h3 style="margin-bottom:8px">🔗 可靠的天氣與警報查詢</h3><div class="grid g2">${[...TRIP.weatherLinks, ...TRIP.usefulLinks].map(l => `<a class="btn" style="justify-content:space-between;border-radius:16px" target="_blank" rel="noopener" href="${esc(l.u)}"><span><b>${esc(l.t)}</b><br><span class="small mute">${esc(l.d)}</span></span><span>↗</span></a>`).join('')}</div>
+    <p class="small mute" style="margin:10px 0 0">牛島船班是否停航、山區道路是否管制，請看船公司公告與韓國氣象廳特報；本站不提供即時警報。</p></div></section></div>`;
+  for (const p of TRIP.weatherPlaces) {
+    const box = $('#w_' + p.id); if (!box) continue;
+    try {
+      const j = await fetchWeather(p); const d = j.daily; const days = ['2026-11-21', '2026-11-22', '2026-11-23', '2026-11-24'];
+      const rows = days.map(day => {
+        const i = d.time.indexOf(day); if (i < 0) return `<div class="wday"><div class="d">${day.slice(5).replace('-', '/')}</div><div class="mute small">預報尚未開放（約出發前 16 天內才會出現），請稍後再看。</div></div>`;
+        const dt = new Date(day + 'T00:00:00'); const wd = '日一二三四五六'[dt.getDay()];
+        return `<div class="wday"><div class="d">${day.slice(5).replace('-', '/')}<small>週${wd}</small></div><div><b>${WCODE[d.weather_code[i]] || '—'}</b><div class="wrow"><span><b>氣溫</b>${Math.round(d.temperature_2m_min[i])}–${Math.round(d.temperature_2m_max[i])}°C</span><span><b>降水機率</b>${d.precipitation_probability_max[i] ?? '—'}%</span><span><b>降雪量</b>${d.snowfall_sum[i] ?? 0} cm</span><span><b>風速</b>${d.wind_speed_10m_max[i]} m/s</span><span><b>陣風</b>${d.wind_gusts_10m_max[i]} m/s</span><span><b>日落</b>${(d.sunset[i] || '').slice(11, 16)}</span></div></div></div>`;
+      }).join('');
+      box.innerHTML = `<h3>${esc(p.name)}</h3>${rows}<div class="acts"><a class="btn sm" target="_blank" rel="noopener" href="https://search.naver.com/search.naver?query=${enc(p.nq)}">NAVER 天氣</a></div>`;
+    } catch (e) {
+      box.innerHTML = `<h3>${esc(p.name)}</h3><p class="small" style="color:#9b5a43">目前取不到即時預報：這個預覽環境不允許網頁連到外部氣象服務；把網站發布到 Netlify／GitHub Pages 後會自動顯示。我不會顯示假資料，現在請看上方氣候參考，或點下方連結。</p><div class="acts"><a class="btn sm" target="_blank" rel="noopener" href="https://search.naver.com/search.naver?query=${enc(p.nq)}">NAVER 天氣</a><a class="btn sm" target="_blank" rel="noopener" href="https://www.weather.go.kr/w/index.do">KMA 氣象廳</a></div>`;
+    }
+  }
+}
+
+
+/* ============================================================
+   牛島船班頁（資料來源：chengshan.kr 牛島頁面，2026/11/17 讀取）
+   ============================================================ */
+function vUdo(el) {
+  const U = TRIP.udo;
+  const tbl = r => `<div class="card"><h3 style="margin-bottom:6px">${esc(r.t)}</h3><div class="small mute" style="margin-bottom:8px">${esc(r.n)}</div><div class="times">${r.times.map(x => `<span>${x}</span>`).join('')}</div></div>`;
+  el.innerHTML = `<div class="wrap"><section class="sec" style="margin-top:26px">${secH('牛島船班', 'Udo Ferry')}
+    <div class="warnbox"><b>⚠ 實際班次請「當天或前一天」務必確認</b><br>${esc(U.warn)}<div class="acts"><a class="btn sm pri" href="tel:+82647825671">📞 城山港售票處 064-782-5671</a><a class="btn sm" href="${esc(U.srcUrl)}" target="_blank" rel="noopener">開啟 chengshan.kr 牛島頁（看即時運航狀態）</a></div></div>
+    <div class="grid g2" style="margin-top:16px">${U.tables.map(tbl).join('')}</div>
+    <p class="small mute" style="margin:8px 0 0">時刻表是固定班次，會受潮汐與天氣影響；來源頁面沒有寫冬季／夏季差異，11 月實際班次請照上面提醒確認。你們 Day 3 計畫 11:00 前後出發、建議搭 <b>16:00 以前</b>的回程船。</p>
+    <div class="grid g2" style="margin-top:16px">
+      <div class="card"><h3 style="margin-bottom:8px">🎫 船票（韓元，來回含碼頭使用費）</h3><div class="small">${U.fares.map(f => `<div class="kv"><b>${esc(f[0])}</b>${esc(f[1])}</div>`).join('')}</div><p class="small mute" style="margin:8px 0 0">${esc(U.fareNote)}</p></div>
+      <div class="card"><h3 style="margin-bottom:8px">📝 購票與攜帶</h3><ul class="list small">${U.how.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        <h3 style="margin:12px 0 6px">📞 電話</h3><ul class="list small">${U.tel.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div></div>
+    <div class="card soft" style="margin-top:16px"><h3 style="margin-bottom:8px">🛵 在牛島租電動摩托車</h3><ul class="list small">${U.scooter.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+    <div class="card" style="margin-top:16px"><h3 style="margin-bottom:8px">🍨 頁面列出的牛島／城山港餐飲</h3><ul class="list small">${U.food.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+    <div class="acts" style="margin-top:14px"><button class="btn pri" data-go="day3">← 回 Day 3 行程</button></div>
+  </section></div>`;
+}
+
+/* ============================================================
+   事件
+   ============================================================ */
+document.addEventListener('click', async e => {
+  const t = e.target.closest('[data-go]'); if (t) { e.preventDefault(); return go(t.dataset.go); }
+  const ms = e.target.closest('[data-mapsel]'); if (ms) { S.mapSel[S.day] = ms.dataset.mapsel; return vDay($('#view')); }
+  const ff = e.target.closest('[data-ff]'); if (ff) { S.foodFilter = +ff.dataset.ff; return vFood($('#view')); }
+  const pf = e.target.closest('[data-pf]'); if (pf) { S.photoFilter = pf.dataset.pf; $$('[data-pf]').forEach(b => b.classList.toggle('on', b.dataset.pf === S.photoFilter)); return drawGallery(); }
+  if (e.target.closest('[data-herophoto]')) return pickFile(false, async fs => { if (!fs[0]) return; try { const b = await resizeImage(fs[0], 2000, .85); await DB.put('assets', { key: 'hero', blob: b }); S.assetUrls.hero = URL.createObjectURL(b); applyHeroPhoto(); toast('主視覺已更換'); } catch (er) { toast('這個照片格式無法處理，請改用 JPG／PNG'); } });
+  const su = e.target.closest('[data-slotup]'); if (su) return pickFile(false, async fs => { if (!fs[0]) return; try { const b = await resizeImage(fs[0], 1200, .82); const key = 'slot:' + su.dataset.slotup; await DB.put('assets', { key, blob: b }); S.assetUrls[key] = URL.createObjectURL(b); hydrateSlots($('#view')); toast('照片已更新'); } catch (er) { toast('這個照片格式無法處理，請改用 JPG／PNG'); } });
+  // 預算
+  const cur = e.target.closest('[data-cur]'); if (cur) { S.budget.cur = cur.dataset.cur; saveBudget(); $$('#curSeg button').forEach(b => b.classList.toggle('on', b.dataset.cur === S.budget.cur)); return; }
+  const ee = e.target.closest('[data-editexp]'); if (ee) return editExpModal(ee.dataset.editexp);
+  const de = e.target.closest('[data-delexp]'); if (de) { if (de.dataset.sure) { S.budget.expenses = S.budget.expenses.filter(x => x.id !== de.dataset.delexp); saveBudget(); return vBudget($('#view')); } de.dataset.sure = '1'; de.textContent = '確定刪除？'; return setTimeout(() => { if (de.isConnected) { delete de.dataset.sure; de.textContent = '刪除'; } }, 3000); }
+  const bk = e.target.closest('[data-backup]'); if (bk) {
+    const a = bk.dataset.backup;
+    if (a === 'copy') { const data = JSON.stringify({ v: 1, budget: S.budget, checklist: S.checklist, notes: S.notes, custom: S.custom, flagsDone: S.flagsDone }); const box = $('#backupBox'); box.classList.remove('hide'); box.value = data; box.select(); return copyText(data); }
+    if (a === 'import') { $('#backupBox').classList.remove('hide'); $('#backupAct').classList.remove('hide'); $('#backupBox').value = ''; $('#backupBox').placeholder = '把備份文字貼在這裡'; return $('#backupBox').focus(); }
+    if (a === 'doimport') { try { const d = JSON.parse($('#backupBox').value); if (!d || d.v !== 1) throw 0; S.budget = d.budget; S.checklist = d.checklist; S.notes = d.notes || {}; S.custom = d.custom || {}; S.flagsDone = d.flagsDone || {}; saveBudget(); saveCheck(); LS.set('notes', S.notes); LS.set('custom', S.custom); LS.set('flagsDone', S.flagsDone); vBudget($('#view')); return toast('匯入完成'); } catch (er) { return toast('備份文字格式不正確'); } }
+    if (a === 'reset') { if (bk.dataset.sure) { S.budget = { krw: TRIP.krwPerTwd, members: [...TRIP.members], budgets: {}, expenses: [], cur: 'KRW' }; saveBudget(); return vBudget($('#view')); } bk.dataset.sure = '1'; bk.textContent = '再按一次確定清空'; return setTimeout(() => { if (bk.isConnected) { delete bk.dataset.sure; bk.textContent = '清空預算資料'; } }, 3000); }
+  }
+  // 相簿
+  if (e.target.closest('[data-upload]')) { const day = +$('#upDay').value; return pickFile(true, async fs => { let ok = 0, fail = 0; toast('處理中…'); for (const f of fs) { try { const b = await resizeImage(f); await DB.put('photos', { id: uid(), day, blob: b, caption: '', ts: Date.now() }); ok++; } catch (er) { fail++; } } await loadPhotos(); if (S.view === 'photos') { S.photoFilter = 'all'; vPhotos($('#view')); } toast(`已加入 ${ok} 張${fail ? `，${fail} 張格式不支援` : ''}`); }); }
+  const fg = e.target.closest('figure[data-ph]'); if (fg) return openLB(fg.dataset.ph);
+  const lb = e.target.closest('[data-lb]');
+  if (lb) {
+    const a = lb.dataset.lb;
+    if (a === 'close') return $('#lb').remove();
+    if (a === 'prev') return lbMove(-1); if (a === 'next') return lbMove(1);
+    if (a === 'del') { const p = lbList[lbIdx]; if (lb.dataset.sure) { await DB.del('photos', p.id); S.photos = S.photos.filter(x => x.id !== p.id); lbList.splice(lbIdx, 1); if (lbIdx >= lbList.length) lbIdx = 0; drawGallery(); return drawLB(); } lb.dataset.sure = '1'; lb.textContent = '確定刪除？'; return; }
+  }
+  if (e.target.id === 'lb') e.target.remove();
+  // 清單
+  if (e.target.closest('[data-ckreset]')) { S.checklist.forEach(g => g.items.forEach(i => i.done = false)); saveCheck(); return vCheck($('#view')); }
+  if (e.target.closest('[data-wretry]')) { S.weather = {}; return vWeather($('#view')); }
+  if (e.target.closest('[data-ckrestore]')) { const b = e.target.closest('[data-ckrestore]'); if (b.dataset.sure) { S.checklist = defaultChecklist(); saveCheck(); return vCheck($('#view')); } b.dataset.sure = '1'; b.textContent = '再按一次：會清掉你的修改'; return setTimeout(() => { if (b.isConnected) { delete b.dataset.sure; b.textContent = '還原預設清單'; } }, 3500); }
+  const kgd = e.target.closest('[data-ckgdel]'); if (kgd) { const G = S.checklist.find(x => x.id === kgd.dataset.ckgdel); if (kgd.dataset.sure) { S.checklist = S.checklist.filter(x => x !== G); saveCheck(); return vCheck($('#view')); } kgd.dataset.sure = '1'; kgd.textContent = '確定刪整組？'; return setTimeout(() => { if (kgd.isConnected) { delete kgd.dataset.sure; kgd.textContent = '🗑'; } }, 3000); }
+  const kd = e.target.closest('[data-ckdel]'); if (kd) { const [g, i] = kd.dataset.ckdel.split('|'); const G = S.checklist.find(x => x.id === g); G.items = G.items.filter(x => x.id !== i); saveCheck(); return vCheck($('#view')); }
+});
+document.addEventListener('change', async e => {
+  const t = e.target;
+  if (t.dataset.flag) { S.flagsDone[t.dataset.flag] = t.checked; LS.set('flagsDone', S.flagsDone); return route(true); }
+  if (t.dataset.cktext) { const [g, i] = t.dataset.cktext.split('|'); const it = S.checklist.find(x => x.id === g).items.find(x => x.id === i); const v = t.value.trim(); if (v) { it.text = v; saveCheck(); } else { t.value = it.text; toast('項目不能是空的（要刪除請按 ✕）'); } return; }
+  if (t.dataset.ckgname) { const G = S.checklist.find(x => x.id === t.dataset.ckgname); const v = t.value.trim(); if (v) { G.name = v; saveCheck(); } else t.value = G.name; return; }
+  if (t.dataset.ck) { const [g, i] = t.dataset.ck.split('|'); const it = S.checklist.find(x => x.id === g).items.find(x => x.id === i); it.done = t.checked; saveCheck(); return vCheck($('#view')); }
+  if (t.id === 'rate') { const v = parseFloat(t.value); if (v > 0) { S.budget.krw = v; saveBudget(); vBudget($('#view')); } else toast('請輸入大於 0 的匯率'); return; }
+  if (t.dataset.member !== undefined) { const i = +t.dataset.member, old = S.budget.members[i], nv = t.value.trim() || old; S.budget.members[i] = nv; S.budget.expenses.forEach(x => { if (x.payer === old) x.payer = nv; }); saveBudget(); return vBudget($('#view')); }
+  if (t.dataset.budget) { S.budget.budgets[t.dataset.budget] = parseFloat(t.value) || 0; saveBudget(); return vBudget($('#view')); }
+  if (t.id === 'lbday') { const p = lbList[lbIdx]; p.day = +t.value; await DB.put('photos', p); drawGallery(); return; }
+  if (t.dataset.custom) { const id = t.dataset.custom; S.custom[id] = S.custom[id] || {}; S.custom[id][t.dataset.f] = t.value.trim(); LS.set('custom', S.custom); return vDay($('#view')); }
+});
+document.addEventListener('input', async e => {
+  const t = e.target;
+  if (t.dataset.note) { S.notes[t.dataset.note] = t.value; LS.set('notes', S.notes); }
+  if (t.id === 'lbcap') { const p = lbList[lbIdx]; p.caption = t.value; clearTimeout(window.__cap); window.__cap = setTimeout(async () => { await DB.put('photos', p); drawGallery(); }, 500); }
+});
+document.addEventListener('toggle', e => { if (e.target.id !== 'mapdet') return; S.mapOpen = e.target.open; const f = $('iframe', e.target); if (e.target.open && f && !f.getAttribute('src')) f.src = f.dataset.src; }, true);
+document.addEventListener('submit', e => {
+  const f = e.target;
+  if (f.id === 'expForm') {
+    e.preventDefault(); const d = new FormData(f); const amt = parseFloat(d.get('amt'));
+    if (!(amt >= 0)) return toast('請輸入正確金額');
+    S.budget.lastDate = d.get('date');
+    S.budget.expenses.push({ id: uid(), date: d.get('date'), cat: d.get('cat'), item: (d.get('item') || '').trim(), amt, cur: S.budget.cur, payer: d.get('payer'), note: (d.get('note') || '').trim() });
+    saveBudget(); vBudget($('#view')); toast('已加入'); return;
+  }
+  if (f.hasAttribute('data-ckgadd')) { e.preventDefault(); const v = $('input', f).value.trim(); if (!v) return; S.checklist.push({ id: 'u' + uid(), name: v, items: [] }); saveCheck(); return vCheck($('#view')); }
+  if (f.dataset.ckadd) {
+    e.preventDefault(); const inp = $('input', f); const v = inp.value.trim(); if (!v) return;
+    S.checklist.find(g => g.id === f.dataset.ckadd).items.push({ id: uid(), text: v, done: false }); saveCheck(); vCheck($('#view'));
+  }
+});
+document.addEventListener('keydown', e => {
+  if (!$('#lb')) return; if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') { return; }
+  if (e.key === 'Escape') $('#lb').remove(); if (e.key === 'ArrowLeft') lbMove(-1); if (e.key === 'ArrowRight') lbMove(1);
+});
+let tx0 = null;
+document.addEventListener('touchstart', e => { if ($('#lb') && e.target.closest('#lb img')) tx0 = e.touches[0].clientX; }, { passive: true });
+document.addEventListener('touchend', e => { if (tx0 === null) return; const dx = e.changedTouches[0].clientX - tx0; tx0 = null; if (Math.abs(dx) > 50) lbMove(dx < 0 ? 1 : -1); }, { passive: true });
+
+/* ---------- 啟動 ---------- */
+$('#stone').src = artUrl('stone');
+(function () { const b = document.getElementById('totop'); if (!b) return; const upd = () => b.classList.toggle('show', (window.scrollY || document.documentElement.scrollTop) > 320); window.addEventListener('scroll', upd, { passive: true }); b.addEventListener('click', () => { const r = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches; window.scrollTo({ top: 0, behavior: r ? 'auto' : 'smooth' }); }); upd(); })();
+document.title = `${TRIP.groupName}｜濟州島 ${TRIP.dateLabel}`;
+route();
+
+</script>
+</body>
+</html>
